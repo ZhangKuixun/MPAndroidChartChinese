@@ -22,6 +22,7 @@ import com.github.mikephil.charting.renderer.CombinedChartRenderer;
 /**
  * This chart class allows the combination of lines, bars, scatter and candle
  * data all displayed in one chart area.
+ * 这个图表类允许在一个图表区域中显示的线条、条形、散布和蜡烛数据的组合。
  *
  * @author Philipp Jahoda
  */
@@ -93,7 +94,7 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
     public void setData(CombinedData data) {
         super.setData(data);
         setHighlighter(new CombinedHighlighter(this, this));
-        ((CombinedChartRenderer)mRenderer).createRenderers();
+        ((CombinedChartRenderer) mRenderer).createRenderers();
         mRenderer.initBuffers();
     }
 
@@ -114,7 +115,8 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
             return null;
         } else {
             Highlight h = getHighlighter().getHighlight(x, y);
-            if (h == null || !isHighlightFullBarEnabled()) return h;
+            if (h == null || !isHighlightFullBarEnabled())
+                return h;
 
             // For isHighlightFullBarEnabled, remove stackIndex
             return new Highlight(h.getX(), h.getY(),
