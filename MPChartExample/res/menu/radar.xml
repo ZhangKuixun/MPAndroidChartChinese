@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleValues"
+        android:title="切换值">
+    </item>
+    <item
+        android:id="@+id/actionToggleIcons"
+        android:title="切换图标">
+    </item>
+    <item
+        android:id="@+id/actionToggleFilled"
+        android:title="切换填满">
+    </item>
+    <item
+        android:id="@+id/actionToggleHighlight"
+        android:title="切换高亮">
+    </item>
+    <item
+        android:id="@+id/actionToggleHighlightCircle"
+        android:title="切换高亮圆点">
+    </item>
+    <item
+        android:id="@+id/animateX"
+        android:title="X轴动画">
+    </item>
+    <item
+        android:id="@+id/animateY"
+        android:title="Y轴动画">
+    </item>
+    <item
+        android:id="@+id/animateXY"
+        android:title="XY轴动画">
+    </item>
+    <item
+        android:id="@+id/actionSave"
+        android:title="保存到SD卡">
+    </item>
+    <item
+        android:id="@+id/actionToggleRotate"
+        android:title="切换旋转">
+    </item>
+    <item
+        android:id="@+id/actionToggleYLabels"
+        android:title="切换Y标签">
+    </item>
+    <item
+        android:id="@+id/actionToggleXLabels"
+        android:title="切换X标签">
+    </item>
+    <item
+        android:id="@+id/actionToggleSpin"
+        android:title="旋转动画">
+    </item>
+
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleLineValues"
+        android:title="切换线的值">
+    </item>
+    <item
+        android:id="@+id/actionToggleBarValues"
+        android:title="切换柱状图的值">
+    </item>
+    <item
+        android:id="@+id/actionRemoveDataSet"
+        android:title="删除随机设置">
+    </item>
+</menu>

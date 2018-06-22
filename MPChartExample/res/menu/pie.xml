@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleValues"
+        android:title="切换Y轴值">
+    </item>
+    <item
+        android:id="@+id/actionToggleIcons"
+        android:title="切换图标">
+    </item>
+    <item
+        android:id="@+id/actionToggleXVals"
+        android:title="切换X轴值">
+    </item>
+    <item
+        android:id="@+id/actionTogglePercent"
+        android:title="切换百分比">
+    </item>
+    <item
+        android:id="@+id/actionToggleHole"
+        android:title="切换孔洞">
+    </item>
+    <item
+        android:id="@+id/animateX"
+        android:title="X轴动画">
+    </item>
+    <item
+        android:id="@+id/animateY"
+        android:title="Y轴动画">
+    </item>
+        <item
+        android:id="@+id/animateXY"
+        android:title="XY轴动画">
+    </item>
+    <item
+        android:id="@+id/actionDrawCenter"
+        android:title="绘制中心文本">
+    </item>
+    <item
+        android:id="@+id/actionSave"
+        android:title="保存到手机">
+    </item>
+    <item
+        android:id="@+id/actionToggleSpin"
+        android:title="旋转动画">
+    </item>
+
+</menu>

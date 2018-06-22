@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/viewGithub"
+        android:title="github 上的项目">
+    </item>
+    <item
+        android:id="@+id/report"
+        android:title="问题报告">
+    </item>
+    <item
+        android:id="@+id/blog"
+        android:title="开发者博客 ">
+    </item>
+    <item
+        android:id="@+id/website"
+        android:title="开发者网站">
+    </item>
+
+</menu>

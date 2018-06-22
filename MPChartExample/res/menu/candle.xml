@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleHighlight"
+        android:title="切换高亮">
+    </item>
+    <item
+        android:id="@+id/animateX"
+        android:title="X轴动画">
+    </item>
+    <item
+        android:id="@+id/animateY"
+        android:title="Y轴动画">
+    </item>
+    <item
+        android:id="@+id/animateXY"
+        android:title="XY轴动画">
+    </item>
+    <item
+        android:id="@+id/actionToggleAdjustXLegend"
+        android:title="Toggle AdjustXLegend">
+    </item>
+    <item
+        android:id="@+id/actionSave"
+        android:title="保存到SD卡">
+    </item>
+    <item
+        android:id="@+id/actionTogglePinch"
+        android:title="缩放模式">
+    </item>
+    <item
+        android:id="@+id/actionToggleAutoScaleMinMax"
+        android:title="切换自动缩放最大/最小值">
+    </item>
+    <item
+        android:id="@+id/actionToggleMakeShadowSameColorAsCandle"
+        android:title="切换阴影相同颜色">
+    </item>
+
+</menu>

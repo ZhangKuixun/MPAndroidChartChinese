@@ -5,3 +5,5 @@ build/
 app/src/androidTest
 app/src/test
 local.properties
+gradle.properties
+org.springsource.ide.eclipse.gradle.core.prefs

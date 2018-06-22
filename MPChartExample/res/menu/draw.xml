@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionToggleValues"
+        android:title="切换值">
+    </item>
+    <item
+        android:id="@+id/actionToggleFilled"
+        android:title="切换填充">
+    </item>
+    <item
+        android:id="@+id/actionToggleCircles"
+        android:title="切换原点">
+    </item>
+    <item
+        android:id="@+id/actionToggleHighlight"
+        android:title="切换高亮">
+    </item>
+    <item
+        android:id="@+id/actionToggleAdjustXLegend"
+        android:title="Toggle AdjustXLegend">
+    </item>
+    <item
+        android:id="@+id/actionSave"
+        android:title="保存到本地">
+    </item>
+	<item
+        android:id="@+id/actionTogglePinch"
+        android:title="切换缩放模式">
+    </item>
+    <item
+        android:id="@+id/actionToggleAutoScaleMinMax"
+        android:title="切换自动缩放最大/最小值">
+    </item>
+</menu>

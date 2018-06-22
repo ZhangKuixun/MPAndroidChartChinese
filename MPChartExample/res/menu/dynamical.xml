@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/actionAddEntry"
+        android:title="添加记录">
+    </item>
+    
+    <item
+        android:id="@+id/actionRemoveEntry"
+        android:title="删除记录">
+    </item>
+    
+        <item
+        android:id="@+id/actionAddDataSet"
+        android:title="删除数据集">
+    </item>
+    
+    <item
+        android:id="@+id/actionRemoveDataSet"
+        android:title="删除数据集">
+    </item>
+    
+    <item
+        android:id="@+id/actionAddEmptyLineData"
+        android:title="添加空线数据">
+    </item>
+    
+    <item
+        android:id="@+id/actionClear"
+        android:title="清楚图表">
+    </item>
+</menu>
