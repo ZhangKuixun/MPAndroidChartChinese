@@ -113,7 +113,7 @@ public class XAxisRenderer extends AxisRenderer {
         mAxisLabelPaint.setTextSize(mXAxis.getTextSize());
         mAxisLabelPaint.setColor(mXAxis.getTextColor());
 
-        MPPointF pointF = MPPointF.getInstance(0,0);
+        MPPointF pointF = MPPointF.getInstance(0, 0);
         if (mXAxis.getPosition() == XAxisPosition.TOP) {
             pointF.x = 0.5f;
             pointF.y = 1.0f;
@@ -230,8 +230,16 @@ public class XAxisRenderer extends AxisRenderer {
     protected void drawLabel(Canvas c, String formattedLabel, float x, float y, MPPointF anchor, float angleDegrees) {
         Utils.drawXAxisValue(c, formattedLabel, x, y, mAxisLabelPaint, anchor, angleDegrees);
     }
+
     protected Path mRenderGridLinesPath = new Path();
     protected float[] mRenderGridLinesBuffer = new float[2];
+
+    /**
+     * 1）创建一个标签数乘以2大小的数组；
+     * 2）把需要画的竖线的位置数据赋值给 positions 数组；
+     * 3）调用 mTrans.pointValuesToPixel(positions) 方法把数组 positions 里的数据变换；
+     * 4）根据 mTrans.pointValuesToPixel(positions) 方法变换好的数据，调用drawGridLine方法，把竖线画出来。
+     */
     @Override
     public void renderGridLines(Canvas c) {
 
@@ -241,25 +249,29 @@ public class XAxisRenderer extends AxisRenderer {
         int clipRestoreCount = c.save();
         c.clipRect(getGridClippingRect());
 
-        if(mRenderGridLinesBuffer.length != mAxis.mEntryCount * 2){
+        //如果保证 mRenderGridLinesBuffer 长度为X轴标签数乘以2（ mAxis.mEntryCount 为 label 数）
+        if (mRenderGridLinesBuffer.length != mAxis.mEntryCount * 2) {
             mRenderGridLinesBuffer = new float[mXAxis.mEntryCount * 2];
         }
         float[] positions = mRenderGridLinesBuffer;
 
+        //mEntries 数组里面装的是x轴 setValueFormatter 里的 value 中从最小到大开始取的值
         for (int i = 0; i < positions.length; i += 2) {
             positions[i] = mXAxis.mEntries[i / 2];
             positions[i + 1] = mXAxis.mEntries[i / 2];
         }
 
+        //用所有矩阵变换点数组。非常重要：在变换时保持矩阵顺序“值触摸偏移”
         mTrans.pointValuesToPixel(positions);
 
+        //设置画笔属性
         setupGridPaint();
 
         Path gridLinePath = mRenderGridLinesPath;
         gridLinePath.reset();
 
         for (int i = 0; i < positions.length; i += 2) {
-
+            //根据 positions 数组里的值画出X轴竖线
             drawGridLine(c, positions[i], positions[i + 1], gridLinePath);
         }
 

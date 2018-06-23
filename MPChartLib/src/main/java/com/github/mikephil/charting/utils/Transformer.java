@@ -263,6 +263,8 @@ public class Transformer {
     /**
      * Transform an array of points with all matrices. VERY IMPORTANT: Keep
      * matrix order "value-touch-offset" when transforming.
+     * <p>
+     * 用所有矩阵变换点数组。非常重要：在变换时保持矩阵顺序“值触摸偏移”。
      *
      * @param pts
      */

@@ -1274,7 +1274,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
      * instance of the legend in order to customize the automatically generated
      * Legend.
      *
-     * @return
+     * @return 图表的图例对象。此方法可用于获取图例的实例，它是为了自定义自动生成的图例。
      */
     public Legend getLegend() {
         return mLegend;

@@ -4,7 +4,6 @@ package com.xxmassdeveloper.mpchartexample;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
-import android.graphics.Matrix;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -187,14 +186,14 @@ public class LineChartActivity1 extends DemoBase implements OnSeekBarChangeListe
                 mChart.invalidate();
                 break;
             }
-            case R.id.actionToggleHighlight: {
+            case R.id.actionToggleHighlight: {//启用／禁用焦点线（Highlight）
                 if (mChart.getData() != null) {
                     mChart.getData().setHighlightEnabled(!mChart.getData().isHighlightEnabled());
                     mChart.invalidate();
                 }
                 break;
             }
-            case R.id.actionToggleFilled: {
+            case R.id.actionToggleFilled: {//切换填充背景色
 
                 List<ILineDataSet> sets = mChart.getData()
                         .getDataSets();
