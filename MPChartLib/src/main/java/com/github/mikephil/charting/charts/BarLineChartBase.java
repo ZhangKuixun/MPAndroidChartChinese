@@ -829,9 +829,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
 
 
     /**
-     * Moves the left side of the current viewport to the specified x-position.
-     * This also refreshes the chart by calling invalidate().
-     * 将当前视口的左侧（边）到指定的 x 值
+     * 将当前视口的左侧移动到指定的X位置。这也通过调用 invalidate() 刷新图表。
      *
      * @param xValue
      */
@@ -1100,10 +1098,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Set this to true to enable dragging (moving the chart with the finger)
-     * for the chart (this does not effect scaling).
+     * 启用或者禁用拖拽交互
      *
-     * @param enabled
+     * @param enabled 将此设置为true，以启用拖动（用手指移动图表）当前图表（这不影响缩放）。
      */
     public void setDragEnabled(boolean enabled) {
         this.mDragXEnabled = enabled;
@@ -1156,20 +1153,29 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Set this to true to enable scaling (zooming in and out by gesture) for
-     * the chart (this does not effect dragging) on both X- and Y-Axis.
+     * 启用或者禁用缩放交互（X轴和Y轴）
      *
-     * @param enabled
+     * @param enabled 设置为true，启用x轴和y轴上缩放（缩放手势）（这不影响拖动）。
      */
     public void setScaleEnabled(boolean enabled) {
         this.mScaleXEnabled = enabled;
         this.mScaleYEnabled = enabled;
     }
 
+    /**
+     * 启用或者禁用X轴缩放交互
+     *
+     * @param enabled true=启用，false=禁用
+     */
     public void setScaleXEnabled(boolean enabled) {
         mScaleXEnabled = enabled;
     }
 
+    /**
+     * 启用或者禁用Y轴缩放交互
+     *
+     * @param enabled true=启用，false=禁用
+     */
     public void setScaleYEnabled(boolean enabled) {
         mScaleYEnabled = enabled;
     }
@@ -1183,10 +1189,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Set this to true to enable zooming in by double-tap on the chart.
-     * Default: enabled
-     *
-     * @param enabled
+     * @param enabled 设置为 false，双击放大功能将会被禁用, 默认 true
      */
     public void setDoubleTapToZoomEnabled(boolean enabled) {
         mDoubleTapToZoomEnabled = enabled;
@@ -1290,7 +1293,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Sets whether the chart should keep its position (zoom / scroll) after a rotation (orientation change)
+     * 设置方向更改后图表是否应保持其位置（缩放/滚动）。 默认值：false
      */
     public void setKeepPositionOnRotation(boolean keepPositionOnRotation) {
         mKeepPositionOnRotation = keepPositionOnRotation;
@@ -1477,10 +1480,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * If set to true, both x and y axis can be scaled simultaneously with 2 fingers, if false,
-     * x and y axis can be scaled separately. default: false
-     *
-     * @param enabled
+     * @param enabled 如果设置为 true，X轴和Y轴都可以用2个手指同时缩放，如果为 false，X和Y轴将会分开缩放。默认：false
      */
     public void setPinchZoom(boolean enabled) {
         mPinchZoomEnabled = enabled;
@@ -1590,8 +1590,8 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Flag that indicates if auto scaling on the y axis is enabled. This is
-     * especially interesting for charts displaying financial data.
+     * 指示是否启用y轴上的自动缩放的标志。 如果启用，只要视口更改，y轴就会自动调整到当前x轴范围的最小和最大y值。
+     * 这对于显示财务数据的图表尤其有用。 默认值：false
      *
      * @param enabled the y axis automatically adjusts to the min and max y
      *                values of the current x axis range whenever the viewport

@@ -123,7 +123,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * 所有数据集上的最小和最大值（x和y）。
+     * 计算所有数据集上的最小和最大值（x和y）。
      */
     protected void calcMinMax() {
 
@@ -479,7 +479,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Adjusts the minimum and maximum values based on the given DataSet.
+     * 计算根据给定的数据集调整最小值和最大值。
      *
      * @param d
      */
@@ -630,7 +630,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * 返回第一个数据集 DataSet-数组 依赖于左轴。如果没有找到依赖于左轴相关的数据集，则返回NULL。
+     * 返回依赖于左轴的第一个数据集 DataSet-数组。如果没有找到依赖于左轴相关的数据集，则返回NULL。
      */
     protected T getFirstLeft(List<T> sets) {
         for (T dataSet : sets) {

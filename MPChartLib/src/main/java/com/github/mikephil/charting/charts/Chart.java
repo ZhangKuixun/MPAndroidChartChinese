@@ -279,8 +279,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     // }
 
     /**
-     * Sets a new data object for the chart. The data object contains all values
-     * and information needed for displaying.
+     * 为图表设置新的数据对象。数据对象包含用于显示所需的所有值和信息。
      *
      * @param data
      */
@@ -293,7 +292,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
             return;
         }
 
-        // calculate how many digits are needed
+        // 计算需要多少位数
         setupDefaultFormatter(data.getYMin(), data.getYMax());
 
         for (IDataSet set : mData.getDataSets()) {
@@ -301,7 +300,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
                 set.setValueFormatter(mDefaultValueFormatter);
         }
 
-        // let the chart know there is new data
+        // 让图表知道有新的数据
         notifyDataSetChanged();
 
         if (mLogEnabled)
@@ -667,13 +666,11 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns the Highlight object (contains x-index and DataSet index) of the
-     * selected value at the given touch point inside the Line-, Scatter-, or
-     * CandleStick-Chart.
+     * 返回在指定的触控点内的高亮对象（包含X索引和DataSet index），在Line-, Scatter-, or CandleStick-Chart 中的给定触摸点。
      *
      * @param x
      * @param y
-     * @return
+     * @return 触摸点的亮点
      */
     public Highlight getHighlightByTouchPoint(float x, float y) {
 
@@ -788,9 +785,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * If set to true, chart continues to scroll after touch up. Default: true.
-     *
-     * @param enabled
+     * @param enabled 如果设置为true，滑动操作完成后图表还会继续滚动。默认值为true
      */
     public void setDragDecelerationEnabled(boolean enabled) {
         mDragDecelerationEnabled = enabled;
@@ -806,10 +801,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Deceleration friction coefficient in [0 ; 1] interval, higher values
-     * indicate that speed will decrease slowly, for example if it set to 0, it
-     * will stop immediately. 1 is an invalid value, and will be converted to
-     * 0.999f automatically.
+     * 减速摩擦系数在[0; 1]间隔，较高的值表示速度将缓慢降低，例如，如果设置为0，它将立即停止。 1是无效值，将自动转换为0.9999。
      *
      * @param newValue
      */
@@ -1021,7 +1013,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * set a selection listener for the chart
+     * 为图表设置选择监听器
      *
      * @param l
      */
@@ -1222,8 +1214,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set this to false to disable all gestures and touches on the chart,
-     * default: true
+     * 将此设置为 false 以禁用所有在图表上的手势和触摸，默认值为：true
      *
      * @param enabled
      */
