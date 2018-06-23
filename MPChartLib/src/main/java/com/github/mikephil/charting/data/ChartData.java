@@ -13,8 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Class that holds all relevant data that represents the chart. That involves
- * at least one (or more) DataSets, and an array of x-values.
+ * 包含表示图表的所有相关数据。这涉及至少一个（或多个）数据集和X值数组。
  *
  * @author Philipp Jahoda
  */
@@ -89,9 +88,9 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * constructor for chart data
+     * 图表数据的构造函数
      *
-     * @param sets the dataset array
+     * @param sets data集合数组
      */
     public ChartData(List<T> sets) {
         this.mDataSets = sets;
@@ -99,9 +98,8 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Call this method to let the ChartData know that the underlying data has
-     * changed. Calling this performs all necessary recalculations needed when
-     * the contained data has changed.
+     * 让chart知道它依赖的基础数据已经改变，并执行所有必要的重新计算（比如偏移量，lenged，最大值，最小值...）。
+     * 在动态添加数据时需要用到。
      */
     public void notifyDataChanged() {
         calcMinMax();
@@ -125,7 +123,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Calc minimum and maximum values (both x and y) over all DataSets.
+     * 所有数据集上的最小和最大值（x和y）。
      */
     protected void calcMinMax() {
 
@@ -632,10 +630,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Returns the first DataSet from the datasets-array that has it's dependency on the left axis.
-     * Returns null if no DataSet with left dependency could be found.
-     *
-     * @return
+     * 返回第一个数据集 DataSet-数组 依赖于左轴。如果没有找到依赖于左轴相关的数据集，则返回NULL。
      */
     protected T getFirstLeft(List<T> sets) {
         for (T dataSet : sets) {

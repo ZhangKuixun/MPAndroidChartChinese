@@ -1176,8 +1176,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set this to true to enable logcat outputs for the chart. Beware that
-     * logcat output decreases rendering performance. Default: disabled.
+     * 设置为true将激活chart的logcat输出。但这不利于性能，如果不是必要的，应保持禁用。
      *
      * @param enabled
      */

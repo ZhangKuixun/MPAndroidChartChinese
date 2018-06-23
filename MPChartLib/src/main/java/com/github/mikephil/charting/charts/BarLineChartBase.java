@@ -779,10 +779,8 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Limits the maximum and minimum x range that can be visible by pinching and zooming. e.g. minRange=10, maxRange=100 the
-     * smallest range to be displayed at once is 10, and no more than a range of 100 values can be viewed at once without
-     * scrolling
-     * 设定x轴最大可见区域范围的大小。
+     * 设定可以通过捏和缩放可见的最大和最小X范围。
+     * 例如：minRange=10, maxRange=100，显示的最小范围为10，不滚动即可一次查看不超过100个值的范围。
      *
      * @param minXRange
      * @param maxXRange
@@ -1093,8 +1091,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Sets the color for the background of the chart-drawing area (everything
-     * behind the grid lines).
+     * 设置网格背景应与绘制的颜色。
      *
      * @param color
      */

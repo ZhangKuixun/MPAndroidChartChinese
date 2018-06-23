@@ -10,8 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Data object that allows the combination of Line-, Bar-, Scatter-, Bubble- and
- * CandleData. Used in the CombinedChart class.
+ * 这允许Line-, Bar-, Scatter-, Bubble- and 烛光数据的组合。在组合图表类中使用。
  *
  * @author Philipp Jahoda
  */
@@ -55,7 +54,7 @@ public class CombinedData extends BarLineScatterCandleBubbleData<IBarLineScatter
     @Override
     public void calcMinMax() {
 
-        if(mDataSets == null){
+        if (mDataSets == null) {
             mDataSets = new ArrayList<>();
         }
         mDataSets.clear();

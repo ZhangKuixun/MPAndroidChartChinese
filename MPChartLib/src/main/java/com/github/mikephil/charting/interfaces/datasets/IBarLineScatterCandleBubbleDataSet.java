@@ -8,9 +8,7 @@ import com.github.mikephil.charting.data.Entry;
 public interface IBarLineScatterCandleBubbleDataSet<T extends Entry> extends IDataSet<T> {
 
     /**
-     * Returns the color that is used for drawing the highlight indicators.
-     *
-     * @return
+     * @return 用于绘制高亮指示符的颜色。
      */
     int getHighLightColor();
 }
