@@ -163,7 +163,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set this to true to enable drawing the grid lines for this axis.
+     * 将其设置为true可以绘制轴的网格线。
      *
      * @param enabled
      */
@@ -181,7 +181,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set this to true if the line alongside the axis should be drawn or not.
+     * 如果要画出与轴线并排的线，则将其设置为true。
      *
      * @param enabled
      */
@@ -289,8 +289,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set this to true to enable drawing the labels of this axis (this will not
-     * affect drawing the grid lines or axis lines).
+     * 将此设置为true，以便绘制该轴的标签（这不会影响绘制网格线或轴线）。
      *
      * @param enabled
      */
@@ -639,9 +638,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * By calling this method, any custom maximum value that has been previously set is reseted,
-     * and the calculation is
-     * done automatically.
+     * 调用此方法来撤销先前设置的最大值。 通过这样做，你将再次允许轴自动计算它的最大值。
      */
     public void resetAxisMaximum() {
         mCustomAxisMax = false;
@@ -660,6 +657,8 @@ public abstract class AxisBase extends ComponentBase {
      * By calling this method, any custom minimum value that has been previously set is reseted,
      * and the calculation is
      * done automatically.
+     * 调用此方法来撤销先前设置的最小值。 通过这样做，你将再次允许轴自动计算它的最小值。
+     * 通过调用此方法，预先设置的任何自定义最小值被重设，并且计算自动完成。
      */
     public void resetAxisMinimum() {
         mCustomAxisMin = false;
@@ -675,12 +674,8 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set a custom minimum value for this axis. If set, this value will not be calculated
-     * automatically depending on
-     * the provided data. Use resetAxisMinValue() to undo this. Do not forget to call
-     * setStartAtZero(false) if you use
-     * this method. Otherwise, the axis-minimum value will still be forced to 0.
-     * 为该轴设置自定义最小值。
+     * 为该轴设置自定义最小值。如果设置，该值将不会根据所提供的数据自动计算。使用 resetAxisMinValue()来撤消此操作。
+     * 如果使用此方法，请不要忘记调用 setStartAtZero(false)。否则，轴的最小值仍将被强制为0。
      *
      * @param min
      */
@@ -701,10 +696,8 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set a custom maximum value for this axis. If set, this value will not be calculated
-     * automatically depending on
-     * the provided data. Use resetAxisMaxValue() to undo this.
-     * 为该轴设置自定义最大值。
+     * 设置此轴的自定义最大值。 如果设置，此值将不会根据提供的数据自动计算.
+     * 使用 resetAxisMaxValue() 来撤消此操作。
      *
      * @param max
      */

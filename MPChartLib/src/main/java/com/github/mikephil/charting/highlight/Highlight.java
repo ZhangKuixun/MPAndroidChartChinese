@@ -4,29 +4,29 @@ package com.github.mikephil.charting.highlight;
 import com.github.mikephil.charting.components.YAxis;
 
 /**
- * Contains information needed to determine the highlighted value.
+ * 这个类可以用来得到当前高亮条目的信息，或者用来告诉Chart，需要高亮哪些条目。
  *
  * @author Philipp Jahoda
  */
 public class Highlight {
 
     /**
-     * the x-value of the highlighted value
+     * 高亮值的X值
      */
     private float mX = Float.NaN;
 
     /**
-     * the y-value of the highlighted value
+     * 高亮值的y值
      */
     private float mY = Float.NaN;
 
     /**
-     * the x-pixel of the highlight
+     * 高亮值的x像素点
      */
     private float mXPx;
 
     /**
-     * the y-pixel of the highlight
+     * 高亮值的y像素点
      */
     private float mYPx;
 
@@ -208,11 +208,7 @@ public class Highlight {
     }
 
     /**
-     * Returns true if this highlight object is equal to the other (compares
-     * xIndex and dataSetIndex)
-     *
-     * @param h
-     * @return
+     * 如果此高亮对象等于另一个对象，则返回true（比较xIndex和dataSetIndex）
      */
     public boolean equalTo(Highlight h) {
 

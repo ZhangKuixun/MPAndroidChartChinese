@@ -468,8 +468,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Sets the maximum distance in screen dp a touch can be away from an entry to cause it to get highlighted.
-     * Default: 500dp
+     * 设置最大高亮距离(dp)。 图表上条目大于这个距离不会触发高亮。 默认值：500dp
      *
      * @param distDp
      */
@@ -478,10 +477,9 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns the array of currently highlighted values. This might a null or
-     * empty array if nothing is highlighted.
+     * 以 highlight[] 的形式返回包含所有高光条目信息，X坐标，DateSet索引
      *
-     * @return
+     * @return 当前高亮显示的值数组。如果没有突出显示，这可能是空数组或空数组。
      */
     public Highlight[] getHighlighted() {
         return mIndicesToHighlight;
@@ -497,10 +495,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set this to false to prevent values from being highlighted by tap gesture.
-     * Values can still be highlighted via drag or programmatically. Default: true
-     *
-     * @param enabled
+     * 在图表上将其设置为false可防止点击手势突出显示值。 仍然可以通过拖动或以编程方式突出显示值。 默认值：true
      */
     public void setHighlightPerTapEnabled(boolean enabled) {
         mHighLightPerTapEnabled = enabled;
@@ -534,28 +529,24 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Highlights the values at the given indices in the given DataSets. Provide
-     * null or an empty array to undo all highlighting. This should be used to
-     * programmatically highlight values.
-     * This method *will not* call the listener.
-     *
-     * @param highs
-     */
+     * 突出显示 highs 代表的高光对象表示的值。
+     * 提供NULL或空数组来撤消所有高亮。
+     * 这应该用于以编程方式高亮显示值。
+     **/
     public void highlightValues(Highlight[] highs) {
 
-        // set the indices to highlight
+        // 设置索引以高亮显示
         mIndicesToHighlight = highs;
 
         setLastHighlighted(highs);
 
-        // redraw the chart
+        // 重新绘制图表
         invalidate();
     }
 
     /**
-     * Highlights any y-value at the given x-value in the given DataSet.
-     * Provide -1 as the dataSetIndex to undo all highlighting.
-     * This method will call the listener.
+     * 在给定的数据集中突出给定的X值的Y值。提供-1作为 dataSetIndex 指标来取消所有突出显示。
+     * 此方法将调用侦听器。
      *
      * @param x            The x-value to highlight
      * @param dataSetIndex The dataset index to search in
@@ -578,12 +569,11 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Highlights any y-value at the given x-value in the given DataSet.
-     * Provide -1 as the dataSetIndex to undo all highlighting.
+     * 突出显示给定 DataSet 中指定x位置的值。 dataSetIndex 为-1时撤消所有高亮。 callListener 决定了是否调用选择监听器。
      *
-     * @param x            The x-value to highlight
-     * @param dataSetIndex The dataset index to search in
-     * @param callListener Should the listener be called for this change
+     * @param x            突出显示的X值
+     * @param dataSetIndex 要搜索的数据集索引
+     * @param callListener 听众是否应该为此改变
      */
     public void highlightValue(float x, int dataSetIndex, boolean callListener) {
         highlightValue(x, Float.NaN, dataSetIndex, callListener);
@@ -1251,7 +1241,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Sets a new Description object for the chart.
+     * 为图表设置新的描述对象。
      *
      * @param desc
      */
@@ -1463,8 +1453,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Sets a custom highligher object for the chart that handles / processes
-     * all highlight touch events performed on the chart-view.
+     * 设置一个自定义高亮器来处理所有图表上的高亮事件。你的自定义高亮器必须继承 ChartHighlighter 类
      *
      * @param highlighter
      */

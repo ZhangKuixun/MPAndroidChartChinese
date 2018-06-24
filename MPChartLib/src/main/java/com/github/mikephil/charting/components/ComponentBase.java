@@ -153,9 +153,7 @@ public abstract class ComponentBase {
     }
 
     /**
-     * Set this to true if this component should be enabled (should be drawn),
-     * false if not. If disabled, nothing of this component will be drawn.
-     * Default: true
+     * 设置轴启用或禁用。 如果禁用，无论任何其他设置如何，都不会绘制轴的任何部分
      *
      * @param enabled
      */

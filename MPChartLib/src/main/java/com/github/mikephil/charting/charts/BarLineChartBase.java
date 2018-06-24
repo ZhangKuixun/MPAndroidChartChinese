@@ -1075,10 +1075,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Set this to true to allow highlighting per dragging over the chart
-     * surface when it is fully zoomed out. Default: true
-     *
-     * @param enabled
+     *在图表上将其设置为true，以便在完全缩小时在图表上拖动时突出显示。 默认值：true
      */
     public void setHighlightPerDragEnabled(boolean enabled) {
         mHighlightPerDragEnabled = enabled;

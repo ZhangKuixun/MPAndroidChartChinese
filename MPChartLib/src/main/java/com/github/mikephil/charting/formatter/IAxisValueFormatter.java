@@ -6,9 +6,9 @@ import com.github.mikephil.charting.components.AxisBase;
  * Created by Philipp Jahoda on 20/09/15.
  * Custom formatter interface that allows formatting of
  * axis labels before they are being drawn.
+ * 自定义格式化程序接口，允许在绘制轴坐标之前对其进行格式化。
  */
-public interface IAxisValueFormatter
-{
+public interface IAxisValueFormatter {
 
     /**
      * Called when a value from an axis is to be formatted
