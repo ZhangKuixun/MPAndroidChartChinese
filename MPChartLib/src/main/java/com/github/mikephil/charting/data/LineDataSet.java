@@ -341,8 +341,11 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     /**
-     * Sets the one and ONLY color that should be used for this DataSet.
-     * Internally, this recreates the colors array and adds the specified color.
+     * <p>
+     * 设置圆形指示器的颜色
+     * <p>
+     * 设置一种或者唯一颜色，应该用于这个数据集
+     * 在内部，这会重新创建颜色数组并添加指定的颜色。
      *
      * @param color
      */

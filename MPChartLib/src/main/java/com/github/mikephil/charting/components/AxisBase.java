@@ -182,6 +182,7 @@ public abstract class AxisBase extends ComponentBase {
 
     /**
      * 如果要画出与轴线并排的线，则将其设置为true。
+     * 默认：true
      *
      * @param enabled
      */
@@ -307,10 +308,13 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the number of label entries for the y-axis max = 25, min = 2, default: 6, be aware
-     * that this number is not fixed.
+     * 设置当前轴(x轴/y轴)的标签数量。
+     * <p>
+     * 请注意:
+     * 1.参数count范围：max＝25，min＝2，默认值：6
+     * 2.这个数字是不固定 if(force == false)，只能是近似的。如果 if(force == true)，则确切绘制指定数量的标签，但这样可能导致轴线分布不均匀。
      *
-     * @param count the number of y-axis labels that should be displayed
+     * @param count 应该显示的当前轴(x轴/y轴)标签的数量
      */
     public void setLabelCount(int count) {
 
@@ -324,15 +328,14 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * sets the number of label entries for the y-axis max = 25, min = 2, default: 6, be aware
-     * that this number is not
-     * fixed (if force == false) and can only be approximated.
+     * 设置当前轴(x轴/y轴)的标签数量。
+     * <p>
+     * 请注意:
+     * 1.参数count范围：max＝25，min＝2，默认值：6
+     * 2.这个数字是不固定 if(force == false)，只能是近似的。如果 if(force == true)，则确切绘制指定数量的标签，但这样可能导致轴线分布不均匀。
      *
-     * @param count the number of y-axis labels that should be displayed
-     * @param force if enabled, the set label count will be forced, meaning that the exact
-     *              specified count of labels will
-     *              be drawn and evenly distributed alongside the axis - this might cause labels
-     *              to have uneven values
+     * @param count 应该显示的当前轴(x轴/y轴)标签的数量
+     * @param force 如果启用，将强制设置设置标签计数，这意味着标签的精确计数将被绘制并沿轴均匀分布，这可能会导致标签具有不均匀的值。
      */
     public void setLabelCount(int count, boolean force) {
 

@@ -258,7 +258,8 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * Sets the bottom axis space in percent of the full range. Default 10f
+     * 当前轴距离容器控件底部的距离
+     * Default： 10f
      *
      * @param percent
      */
@@ -391,7 +392,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * Sets autoscale restriction for axis max value as enabled/disabled
+     * 为启用/禁用设置轴的最大值做自动缩放限制
      */
     public void setUseAutoScaleMaxRestriction(boolean isEnabled) {
         mUseAutoScaleRestrictionMax = isEnabled;

@@ -102,6 +102,7 @@ public class XAxis extends AxisBase {
     /**
      * if set to true, the chart will avoid that the first and last label entry
      * in the chart "clip" off the edge of the chart or the screen
+     * 如果设置为true，则在绘制时会避免“剪掉”在x轴上的图表或屏幕边缘的第一个和最后一个坐标轴标签项。
      *
      * @param enabled
      */

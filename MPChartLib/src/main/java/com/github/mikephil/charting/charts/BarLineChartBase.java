@@ -1075,7 +1075,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     *在图表上将其设置为true，以便在完全缩小时在图表上拖动时突出显示。 默认值：true
+     * 在图表上将其设置为true，以便在完全缩小时在图表上拖动时突出显示。 默认值：true
      */
     public void setHighlightPerDragEnabled(boolean enabled) {
         mHighlightPerDragEnabled = enabled;
@@ -1170,6 +1170,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
 
     /**
      * 启用或者禁用Y轴缩放交互
+     * 默认：true
      *
      * @param enabled true=启用，false=禁用
      */
@@ -1213,6 +1214,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     /**
      * When enabled, the borders rectangle will be rendered.
      * If this is enabled, there is no point drawing the axis-lines of x- and y-axis.
+     * 启用/禁用绘制图表边框
      *
      * @param enabled
      */
@@ -1251,9 +1253,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Sets the width of the border lines in dp.
+     * 设置 chart 边界线的宽度，单位 dp。
      *
-     * @param width
+     * @param width 边界线的宽度
      */
     public void setBorderWidth(float width) {
         mBorderPaint.setStrokeWidth(Utils.convertDpToPixel(width));

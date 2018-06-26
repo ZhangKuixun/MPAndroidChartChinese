@@ -19,8 +19,8 @@ import java.util.List;
 
 /**
  * Created by Philipp Jahoda on 21/10/15.
- * This is the base dataset of all DataSets. It's purpose is to implement critical methods
- * provided by the IDataSet interface.
+ * It's purpose is to implement critical methods provided by the IDataSet interface.
+ * 这是所有数据集的基础数据集合。它的目的是实现 IDataSet 接口提供的关键方法。
  */
 public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
 
