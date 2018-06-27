@@ -166,12 +166,10 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
      */
 
     /**
-     * Sets the colors that should be used fore this DataSet. Colors are reused
-     * as soon as the number of Entries the DataSet represents is higher than
-     * the size of the colors array. If you are using colors from the resources,
-     * make sure that the colors are already prepared (by calling
-     * getResources().getColor(...)) before adding them to the DataSet.
-     * 设置每条数据的颜色
+     * 设置在这个数据集之前应该使用的颜色。
+     * <p>
+     * 一旦数据集所代表的条目数量大于颜色数组的大小，颜色就被重用。
+     * 如果您正在使用资源中的颜色，请确保在将这些颜色添加到 DataSet 之前已调用 getResources().getColor(...) 获取颜色。
      *
      * @param colors
      */
@@ -180,13 +178,12 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
     }
 
     /**
-     * Sets the colors that should be used fore this DataSet. Colors are reused
-     * as soon as the number of Entries the DataSet represents is higher than
-     * the size of the colors array. If you are using colors from the resources,
-     * make sure that the colors are already prepared (by calling
-     * getResources().getColor(...)) before adding them to the DataSet.
+     * 设置这个数据集的颜色。
+     * <p>
+     * 一旦数据集所代表的条目数量大于颜色数组的大小，颜色就被重用。
+     * 如果您正在使用资源中的颜色，请确保在将这些颜色添加到 DataSet 之前已调用 getResources().getColor(...) 获取颜色。
      *
-     * @param colors
+     * @param colors 数据的颜色
      */
     public void setColors(int... colors) {
         this.mColors = ColorTemplate.createColors(colors);
@@ -227,8 +224,8 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
     }
 
     /**
-     * Sets the one and ONLY color that should be used for this DataSet.
-     * Internally, this recreates the colors array and adds the specified color.
+     * 设置该数据集应该使用的唯一颜色
+     * 在内部，这会重新创建颜色数组并添加指定的颜色
      *
      * @param color
      */

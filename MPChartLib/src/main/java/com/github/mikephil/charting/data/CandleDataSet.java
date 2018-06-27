@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * DataSet for the CandleStickChart.
+ * 烛台图的数据集
  *
  * @author Philipp Jahoda
  */

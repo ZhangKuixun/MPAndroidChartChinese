@@ -45,10 +45,11 @@ public class BarEntry extends Entry {
 
     /**
      * Constructor for normal bars (not stacked).
+     * 正常栏（不堆叠）的构造函数。
      *
      * @param x
      * @param y
-     * @param data - Spot for additional data this Entry represents.
+     * @param data 该条目表示附加数据点
      */
     public BarEntry(float x, float y, Object data) {
         super(x, y, data);
@@ -71,7 +72,7 @@ public class BarEntry extends Entry {
      * @param x
      * @param y
      * @param icon - icon image
-     * @param data - Spot for additional data this Entry represents.
+     * @param data - 该条目表示附加数据点
      */
     public BarEntry(float x, float y, Drawable icon, Object data) {
         super(x, y, icon, data);
@@ -96,7 +97,7 @@ public class BarEntry extends Entry {
      *
      * @param x
      * @param vals - the stack values, use at least 2
-     * @param data - Spot for additional data this Entry represents.
+     * @param data - 该条目表示附加数据点
      */
     public BarEntry(float x, float[] vals, Object data) {
         super(x, calcSum(vals), data);
@@ -127,7 +128,7 @@ public class BarEntry extends Entry {
      * @param x
      * @param vals - the stack values, use at least 2
      * @param icon - icon image
-     * @param data - Spot for additional data this Entry represents.
+     * @param data - 该条目表示附加数据点
      */
     public BarEntry(float x, float[] vals, Drawable icon, Object data) {
         super(x, calcSum(vals), icon, data);

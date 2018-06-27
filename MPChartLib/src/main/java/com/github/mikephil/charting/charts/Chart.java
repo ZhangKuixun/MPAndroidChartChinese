@@ -775,7 +775,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * @param enabled 如果设置为true，滑动操作完成后图表还会继续滚动。默认值为true
+     * @param enabled 为true，滑动操作完成后图表还会继续滚动。默认值为true
      */
     public void setDragDecelerationEnabled(boolean enabled) {
         mDragDecelerationEnabled = enabled;
@@ -1005,17 +1005,16 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     /**
      * 为图表设置选择监听器
      *
-     * @param l
+     * @param l 选择监听器
      */
     public void setOnChartValueSelectedListener(OnChartValueSelectedListener l) {
         this.mSelectionListener = l;
     }
 
     /**
-     * Sets a gesture-listener for the chart for custom callbacks when executing
-     * gestures on the chart surface.
+     * 在图表上执行手势操作时，为图表设置用于自定义回调的手势监听器
      *
-     * @param l
+     * @param l 手势监听器
      */
     public void setOnChartGestureListener(OnChartGestureListener l) {
         this.mGestureListener = l;
@@ -1250,10 +1249,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns the Description object of the chart that is responsible for holding all information related
-     * to the description text that is displayed in the bottom right corner of the chart (by default).
-     *
-     * @return
+     * 返回图表的描述对象，该对象负责保存与图表中右下角显示的描述文本相关的所有信息（默认情况下）
      */
     public Description getDescription() {
         return mDescription;

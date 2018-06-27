@@ -15,10 +15,14 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     protected boolean mDrawVerticalHighlightIndicator = true;
     protected boolean mDrawHorizontalHighlightIndicator = true;
 
-    /** the width of the highlight indicator lines */
+    /**
+     * 高亮指示线的宽度
+     */
     protected float mHighlightLineWidth = 0.5f;
 
-    /** the path effect for dashed highlight-lines */
+    /**
+     * 虚线高亮线的路径效果
+     */
     protected DashPathEffect mHighlightDashPathEffect = null;
 
 
@@ -28,7 +32,9 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     }
 
     /**
-     * Enables / disables the horizontal highlight-indicator. If disabled, the indicator is not drawn.
+     * 启用/禁用水平高亮指示器。如果禁用，则不绘制指示器。
+     * 默认：true
+     *
      * @param enabled
      */
     public void setDrawHorizontalHighlightIndicator(boolean enabled) {
@@ -36,7 +42,9 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     }
 
     /**
-     * Enables / disables the vertical highlight-indicator. If disabled, the indicator is not drawn.
+     * 启用/禁用垂直高亮指示器。如果禁用，则不绘制指示器。
+     * 默认：true
+     *
      * @param enabled
      */
     public void setDrawVerticalHighlightIndicator(boolean enabled) {
@@ -44,7 +52,8 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     }
 
     /**
-     * Enables / disables both vertical and horizontal highlight-indicators.
+     * 启用/禁用垂直和水平高亮指示器。
+     *
      * @param enabled
      */
     public void setDrawHighlightIndicators(boolean enabled) {
@@ -63,7 +72,8 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     }
 
     /**
-     * Sets the width of the highlight line in dp.
+     * 设置高亮线的宽度，单位dp
+     *
      * @param width
      */
     public void setHighlightLineWidth(float width) {
@@ -76,33 +86,32 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     }
 
     /**
-     * Enables the highlight-line to be drawn in dashed mode, e.g. like this "- - - - - -"
+     * 允许以虚线模式绘制高亮线，e.g. like this "- - - - - -"
      *
-     * @param lineLength the length of the line pieces
-     * @param spaceLength the length of space inbetween the line-pieces
-     * @param phase offset, in degrees (normally, use 0)
+     * @param lineLength  线段长度
+     * @param spaceLength 线段之间的空隙长度
+     * @param phase       偏移量（通常使用0）
      */
     public void enableDashedHighlightLine(float lineLength, float spaceLength, float phase) {
-        mHighlightDashPathEffect = new DashPathEffect(new float[] {
+        mHighlightDashPathEffect = new DashPathEffect(new float[]{
                 lineLength, spaceLength
         }, phase);
     }
 
     /**
-     * Disables the highlight-line to be drawn in dashed mode.
+     * 禁用以虚线模式绘制的高亮线。
      */
     public void disableDashedHighlightLine() {
         mHighlightDashPathEffect = null;
     }
 
     /**
-     * Returns true if the dashed-line effect is enabled for highlight lines, false if not.
-     * Default: disabled
+     * 如果对高亮行启用虚线效果，则返回true，如果否则为false：默认：disabled
      *
      * @return
      */
     public boolean isDashedHighlightLineEnabled() {
-        return mHighlightDashPathEffect == null ? false : true;
+        return mHighlightDashPathEffect != null;
     }
 
     @Override

@@ -165,7 +165,7 @@ public abstract class AxisBase extends ComponentBase {
     /**
      * 将其设置为true可以绘制轴的网格线。
      *
-     * @param enabled
+     * @param enabled true，则绘制网格线
      */
     public void setDrawGridLines(boolean enabled) {
         mDrawGridLines = enabled;
@@ -184,7 +184,7 @@ public abstract class AxisBase extends ComponentBase {
      * 如果要画出与轴线并排的线，则将其设置为true。
      * 默认：true
      *
-     * @param enabled
+     * @param enabled true，则绘制该行旁边的轴线
      */
     public void setDrawAxisLine(boolean enabled) {
         mDrawAxisLine = enabled;
@@ -292,7 +292,7 @@ public abstract class AxisBase extends ComponentBase {
     /**
      * 将此设置为true，以便绘制该轴的标签（这不会影响绘制网格线或轴线）。
      *
-     * @param enabled
+     * @param enabled true，则绘制轴的标签
      */
     public void setDrawLabels(boolean enabled) {
         mDrawLabels = enabled;

@@ -25,10 +25,10 @@ public class Entry extends BaseEntry implements Parcelable {
     }
 
     /**
-     * A Entry represents one single entry in the chart.
+     * 一个条目，表示图表中的一个条目。
      *
-     * @param x the x value
-     * @param y the y value (the actual value of the entry)
+     * @param x x 值
+     * @param y Y 值（条目的实际值）
      */
     public Entry(float x, float y) {
         super(y);
@@ -40,7 +40,7 @@ public class Entry extends BaseEntry implements Parcelable {
      *
      * @param x    the x value
      * @param y    the y value (the actual value of the entry)
-     * @param data Spot for additional data this Entry represents.
+     * @param data 该条目表示附加数据点
      */
     public Entry(float x, float y, Object data) {
         super(y, data);
@@ -65,7 +65,7 @@ public class Entry extends BaseEntry implements Parcelable {
      * @param x    the x value
      * @param y    the y value (the actual value of the entry)
      * @param icon icon image
-     * @param data Spot for additional data this Entry represents.
+     * @param data 该条目表示附加数据点
      */
     public Entry(float x, float y, Drawable icon, Object data) {
         super(y, icon, data);
