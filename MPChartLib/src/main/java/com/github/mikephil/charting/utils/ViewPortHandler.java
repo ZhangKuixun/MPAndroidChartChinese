@@ -409,12 +409,12 @@ public class ViewPortHandler {
     }
 
     /**
-     * buffer for storing the 9 matrix values of a 3x3 matrix
+     * 用于存储3x3矩阵的9个值的缓冲器
      */
     protected final float[] matrixBuffer = new float[9];
 
     /**
-     * call this method to refresh the graph with a given matrix
+     * 调用此方法，用给定 newMatrix 刷新图
      *
      * @param newMatrix
      * @return

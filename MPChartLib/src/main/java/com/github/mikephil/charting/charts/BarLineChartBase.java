@@ -1368,10 +1368,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected MPPointD posForGetLowestVisibleX = MPPointD.getInstance(0, 0);
 
     /**
-     * Returns the lowest x-index (value on the x-axis) that is still visible on
-     * the chart.
-     *
-     * @return
+     * 返回在图表上仍然可见的最低x索引（x轴上的值）
      */
     @Override
     public float getLowestVisibleX() {
@@ -1387,10 +1384,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected MPPointD posForGetHighestVisibleX = MPPointD.getInstance(0, 0);
 
     /**
-     * Returns the highest x-index (value on the x-axis) that is still visible
-     * on the chart.
-     *
-     * @return
+     * 返回在图表上仍然可见的最高x指数（x轴上的值）
      */
     @Override
     public float getHighestVisibleX() {

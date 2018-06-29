@@ -699,7 +699,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * 设置此轴的自定义最大值。 如果设置，此值将不会根据提供的数据自动计算.
+     * 为该轴设置自定义最大值。 如果设置，此值将不会根据提供的数据自动计算.
      * 使用 resetAxisMaxValue() 来撤消此操作。
      *
      * @param max

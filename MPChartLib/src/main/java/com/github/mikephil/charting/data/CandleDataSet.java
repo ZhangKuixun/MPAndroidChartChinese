@@ -153,7 +153,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets the width of the candle-shadow-line in pixels. Default 3f.
+     * 设置蜡烛阴影线的宽度以像素为单位。默认3F。
      *
      * @param width
      */
@@ -193,8 +193,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     /** BELOW THIS COLOR HANDLING */
 
     /**
-     * Sets the one and ONLY color that should be used for this DataSet when
-     * open == close.
+     * 在打开 == 关闭时，设置一个或唯一颜色,用于该数据集。
      *
      * @param color
      */
@@ -208,8 +207,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets the one and ONLY color that should be used for this DataSet when
-     * open <= close.
+     * 在打开 <= 关闭时，设置一个或唯一颜色,用于该数据集。
      *
      * @param color
      */
@@ -223,8 +221,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets the one and ONLY color that should be used for this DataSet when
-     * open > close.
+     * 在打开 > 关闭时，设置一个或唯一颜色,用于该数据集。
      *
      * @param color
      */
@@ -243,7 +240,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets paint style when open < close
+     * 在打开 < 关闭时设置画笔样式
      *
      * @param paintStyle
      */
@@ -257,7 +254,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets paint style when open > close
+     * 在打开 > 关闭时设置画笔样式
      *
      * @param decreasingPaintStyle
      */
@@ -271,7 +268,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets shadow color for all entries
+     * 为所有条目设置阴影颜色
      *
      * @param shadowColor
      */
@@ -285,7 +282,7 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
     }
 
     /**
-     * Sets shadow color to be the same color as the candle color
+     * 设置阴影颜色为与蜡烛颜色相同的颜色
      *
      * @param shadowColorSameAsCandle
      */

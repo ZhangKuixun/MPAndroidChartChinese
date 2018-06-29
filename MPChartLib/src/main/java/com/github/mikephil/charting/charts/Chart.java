@@ -502,9 +502,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns true if there are values to highlight, false if there are no
-     * values to highlight. Checks if the highlight array is null, has a length
-     * of zero or if the first object is null.
+     * 如果存在要突出显示的值，则返回true，如果没有要突出显示的值，则返回false。检查高亮数组是否为空，长度为零，或者第一个对象是否为空。
      *
      * @return
      */
@@ -598,10 +596,9 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Highlights the values represented by the provided Highlight object
-     * This method *will not* call the listener.
+     * 突出显示提供的高亮对象所表示的值，此方法将"不调用"监听器。
      *
-     * @param highlight contains information about which entry should be highlighted
+     * @param highlight 包含应突出显示哪个条目（entry）的信息。
      */
     public void highlightValue(Highlight highlight) {
         highlightValue(highlight, false);
@@ -982,11 +979,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
 
     /**
-     * Returns the object representing all x-labels, this method can be used to
-     * acquire the XAxis object and modify it (e.g. change the position of the
-     * labels, styling, etc.)
-     *
-     * @return
+     * @return 表示所有X标签的对象，该方法可用于获取 XAxis 对象并修改它（例如，更改标签的 labels、styling 等）。
      */
     public XAxis getXAxis() {
         return mXAxis;
@@ -1384,8 +1377,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * returns true if drawing the marker is enabled when tapping on values
-     * (use the setMarker(IMarker marker) method to specify a marker)
+     * 如果在点击值时启用 marker ，则返回 true（使用 setMarker(IMarker marker) 方法指定 marker）
      *
      * @return
      */
@@ -1414,9 +1406,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns the ViewPortHandler of the chart that is responsible for the
-     * content area of the chart and its offsets and dimensions.
-     * 返回图表的ViewPortHandler，负责图表的内容区域及其偏移和维度。
+     * 返回图表的 ViewPortHandler，它负责图表内容的区域及其偏移和维度。
      *
      * @return
      */
@@ -1774,7 +1764,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
         this.mUnbind = enabled;
     }
 
-    private int mRealCount;
+    private int mRealCount = -1;
 
     public int getRealCount() {
         return mRealCount;

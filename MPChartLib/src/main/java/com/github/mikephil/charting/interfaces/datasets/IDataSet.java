@@ -261,8 +261,7 @@ public interface IDataSet<T extends Entry> {
     YAxis.AxisDependency getAxisDependency();
 
     /**
-     * Set the y-axis this DataSet should be plotted against (either LEFT or
-     * RIGHT). Default: LEFT
+     * 使得 DataSet 对应Y轴(左或右)，进行绘制。默认值：左
      *
      * @param dependency
      */
@@ -322,8 +321,8 @@ public interface IDataSet<T extends Entry> {
     boolean isHighlightEnabled();
 
     /**
-     * If set to true, value highlighting is enabled which means that values can
-     * be highlighted programmatically or by touch gesture.
+     * 设置为true，允许通过点击高亮突出 ChartData 对象和其 DataSets。
+     * 可以以编程方式或通过触摸手势突出显示值。
      *
      * @param enabled
      */
@@ -441,10 +440,10 @@ public interface IDataSet<T extends Entry> {
     DashPathEffect getFormLineDashEffect();
 
     /**
-     * set this to true to draw y-values on the chart.
+     * 将此设置为true，绘制图表上的Y值。
+     * 启用/禁用 绘制 DataSets 数据对象包含数据的值的文本。
      * <p>
-     * NOTE (for bar and line charts): if `maxVisibleCount` is reached, no values will be drawn even
-     * if this is enabled
+     * 注（bar 和 line）：如果达到了'maxVisibleCount（最大可见计数）'，即使启用此功能，也不会绘制任何值。
      *
      * @param enabled
      */
