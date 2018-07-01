@@ -168,7 +168,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * sets the position of the y-labels
+     * 设置绘制Y轴标签的位置。 INSIDE_CHART 或 OUTSIDE_CHART。
      *
      * @param pos
      */
@@ -206,9 +206,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * If this is set to true, the y-axis is inverted which means that low values are on top of
-     * the chart, high values
-     * on bottom.
+     * 如果设置为true，则该轴将被反转，这意味着最高值将在底部，最低值在顶部
      *
      * @param enabled
      */
@@ -241,6 +239,7 @@ public class YAxis extends AxisBase {
 
     /**
      * Sets the top axis space in percent of the full range. Default 10f
+     * 设置图表中最高值的顶部间距（以总轴的百分比表示）与轴上的最高值相比较
      *
      * @param percent
      */
@@ -259,6 +258,7 @@ public class YAxis extends AxisBase {
 
     /**
      * Sets the bottom axis space in percent of the full range. Default 10f
+     * 设置图表中最低值的底部间距（以总轴范围的百分比表示）与轴上的最低值相比较.
      *
      * @param percent
      */

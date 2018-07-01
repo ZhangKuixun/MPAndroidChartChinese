@@ -136,6 +136,7 @@ public abstract class ComponentBase {
     /**
      * Sets the text color to use for the labels. Make sure to use
      * getResources().getColor(...) when using a color from the resources.
+     * 设置轴标签的文字颜色.
      *
      * @param color
      */

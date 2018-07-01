@@ -324,15 +324,10 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * sets the number of label entries for the y-axis max = 25, min = 2, default: 6, be aware
-     * that this number is not
-     * fixed (if force == false) and can only be approximated.
+     * 设置y轴的标签数量。请注意，这个数字不是固定的（如果 force == false），并且只能近似。
      *
-     * @param count the number of y-axis labels that should be displayed
-     * @param force if enabled, the set label count will be forced, meaning that the exact
-     *              specified count of labels will
-     *              be drawn and evenly distributed alongside the axis - this might cause labels
-     *              to have uneven values
+     * @param count 在Y轴显示标签的数量
+     * @param force 如果强制启用（true），标签的精确计数将被绘制并沿轴均匀分布 - 这可能导致轴上的数字不均匀。
      */
     public void setLabelCount(int count, boolean force) {
 
@@ -366,8 +361,8 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Enabled/disable granularity control on axis value intervals. If enabled, the axis
-     * interval is not allowed to go below a certain granularity. Default: false
+     * 启用/禁用轴值间隔的粒度控制。如果启用，轴间隔不允许低于某个粒度。
+     * 默认值：false
      *
      * @param enabled
      */
@@ -383,8 +378,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Set a minimum interval for the axis when zooming in. The axis is not allowed to go below
-     * that limit. This can be used to avoid label duplicating when zooming in.
+     * 在缩放时为轴设置最小间隔。轴不允许低于这个极限。这可以用来避免缩放时的标签值重复。
      *
      * @param granularity
      */
