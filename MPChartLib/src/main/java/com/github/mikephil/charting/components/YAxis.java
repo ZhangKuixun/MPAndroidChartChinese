@@ -280,8 +280,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * Set this to true to draw the zero-line regardless of weather other
-     * grid-lines are enabled or not. Default: false
+     * 将此设置为 true，不管其他网格线启用或不启用都会绘制零线。默认：false
      *
      * @param mDrawZeroLine
      */
@@ -294,7 +293,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * Sets the color of the zero line
+     * 设置零线的颜色
      *
      * @param color
      */
@@ -307,7 +306,7 @@ public class YAxis extends AxisBase {
     }
 
     /**
-     * Sets the width of the zero line in dp
+     * 设置零线的宽度（dp）
      *
      * @param width
      */
