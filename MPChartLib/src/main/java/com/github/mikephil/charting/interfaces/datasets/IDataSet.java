@@ -263,6 +263,7 @@ public interface IDataSet<T extends Entry> {
     /**
      * Set the y-axis this DataSet should be plotted against (either LEFT or
      * RIGHT). Default: LEFT
+     * 设置y轴，这个数据集应该被画对（左或右）。默认值：左
      *
      * @param dependency
      */

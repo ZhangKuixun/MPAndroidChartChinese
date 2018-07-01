@@ -99,7 +99,7 @@ public abstract class ComponentBase {
     }
 
     /**
-     * sets a specific Typeface for the labels
+     * 设置轴标签的字体
      *
      * @param tf
      */
@@ -108,10 +108,10 @@ public abstract class ComponentBase {
     }
 
     /**
-     * sets the size of the label text in density pixels min = 6f, max = 24f, default
-     * 10f
+     * 设置轴标签的文字大小(dp)。
+     * min＝6f，max＝24f，默认10f
      *
-     * @param size the text size, in DP
+     * @param size 文本大小，以DP为单位
      */
     public void setTextSize(float size) {
 
@@ -134,9 +134,7 @@ public abstract class ComponentBase {
 
 
     /**
-     * Sets the text color to use for the labels. Make sure to use
-     * getResources().getColor(...) when using a color from the resources.
-     * 设置轴标签的文字颜色.
+     * 设置轴标签的文字颜色。在使用资源的颜色时，请确保使用 getResources().getColor(...)
      *
      * @param color
      */

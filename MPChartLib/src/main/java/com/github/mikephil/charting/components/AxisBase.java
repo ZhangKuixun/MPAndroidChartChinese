@@ -213,8 +213,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the color of the grid lines for this axis (the horizontal lines
-     * coming from each label).
+     * 设置轴网格线的颜色（来自每个标签的水平线）。
      *
      * @param color
      */
@@ -233,7 +232,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the width of the border surrounding the chart in dp.
+     * 设置图表周围的边框宽度（dp）。
      *
      * @param width
      */
@@ -251,8 +250,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the width of the grid lines that are drawn away from each axis
-     * label.
+     * 设置从每个轴标签绘制的网格线的宽度。
      *
      * @param width
      */
@@ -261,8 +259,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Returns the width of the grid lines that are drawn away from each axis
-     * label.
+     * 返回从每个轴标签绘制的网格线的宽度。
      *
      * @return
      */
@@ -271,7 +268,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the color of the border surrounding the chart.
+     * 设置图表周围边框的颜色。
      *
      * @param color
      */
@@ -388,8 +385,10 @@ public abstract class AxisBase extends ComponentBase {
         mGranularityEnabled = true;
     }
 
+    /*两个轴都支持所谓的 LimitLine，允许提供特殊信息，如边界或约束。 添加到 YAxis 的 LimitLines 在水平方向绘制，并且在添加到 XAxis 时在垂直方向绘制。*/
+
     /**
-     * Adds a new LimitLine to this axis.
+     * 给轴添加一条LimitLine
      *
      * @param l
      */
@@ -404,7 +403,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Removes the specified LimitLine from the axis.
+     * 移除轴上一条指定的 LimitLine
      *
      * @param l
      */
@@ -413,14 +412,14 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Removes all LimitLines from the axis.
+     * 从轴移除所有的限制线
      */
     public void removeAllLimitLines() {
         mLimitLines.clear();
     }
 
     /**
-     * Returns the LimitLines of this axis.
+     * 返回这个轴的限制线
      *
      * @return
      */
@@ -429,8 +428,8 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * If this is set to true, the LimitLines are drawn behind the actual data,
-     * otherwise on top. Default: false
+     * 允许控制 LimitLines 和实际数据之间的z顺序。 如果将此设置为 true，则 LimitLine 将在实际数据之后绘制，否则在顶部。
+     * 默认值：false
      *
      * @param enabled
      */
@@ -485,11 +484,9 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the formatter to be used for formatting the axis labels. If no formatter is set, the
-     * chart will
-     * automatically determine a reasonable formatting (concerning decimals) for all the values
-     * that are drawn inside
-     * the chart. Use chart.getDefaultValueFormatter() to use the formatter calculated by the chart.
+     * 设置轴标签的自定义格式
+     * 如果没有设置标签格式化，将自动为图表中绘制所有合理格式化的标签（有关小数）。
+     * 使用 chart.getDefaultValueFormatter() 去使用图表计算格式化的标签。
      *
      * @param f
      */
@@ -517,13 +514,11 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Enables the grid line to be drawn in dashed mode, e.g. like this
-     * "- - - - - -". THIS ONLY WORKS IF HARDWARE-ACCELERATION IS TURNED OFF.
-     * Keep in mind that hardware acceleration boosts performance.
+     * 使网格线以虚线模式绘制，例如”- - - - - -”。只有当硬件加速关闭时，这才有效。请记住硬件加速提高性能。
      *
-     * @param lineLength  the length of the line pieces
-     * @param spaceLength the length of space in between the pieces
-     * @param phase       offset, in degrees (normally, use 0)
+     * @param lineLength  线段的长度
+     * @param spaceLength 线间的空间
+     * @param phase       起点 (通常使用0)
      */
     public void enableGridDashedLine(float lineLength, float spaceLength, float phase) {
         mGridDashPathEffect = new DashPathEffect(new float[]{

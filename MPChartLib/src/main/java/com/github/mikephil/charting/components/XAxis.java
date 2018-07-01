@@ -9,6 +9,8 @@ import com.github.mikephil.charting.utils.Utils;
  * features the XLabels class provides are suitable for the RadarChart.
  * <p>
  * X轴的配置
+ * 所谓的“轴线”被直接绘制在标签附近并与标签平行
+ * “网格线”，各自源于垂直方向的轴标签
  *
  * @author Philipp Jahoda
  */
@@ -75,7 +77,7 @@ public class XAxis extends AxisBase {
     }
 
     /**
-     * sets the position of the x-labels
+     * 设置X轴标签的位置。 在TOP，BOTTOM，BOTH_SIDED，TOP_INSIDE或BOTTOM_INSIDE之间进行选择
      *
      * @param pos
      */
@@ -91,7 +93,7 @@ public class XAxis extends AxisBase {
     }
 
     /**
-     * sets the angle for drawing the X axis labels (in degrees)
+     * 设置绘制x轴标签的角度（以度为单位）
      *
      * @param angle the angle in degrees
      */
