@@ -61,7 +61,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Constructor taking single or multiple DataSet objects.
+     * 构造单个或多个DataSet对象的构造函数。
      *
      * @param dataSets
      */

@@ -288,9 +288,13 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
         return getEntryForXValue(xValue, closestToY, Rounding.CLOSEST);
     }
 
+//    @Override
+//    public T getEntryForIndex(int index) {
+//        return mValues.get(index);
+//    }
     @Override
     public T getEntryForIndex(int index) {
-        return mValues.get(index);
+        return (mValues == null || mValues.isEmpty()) ? null : mValues.get(index);
     }
 
     @Override

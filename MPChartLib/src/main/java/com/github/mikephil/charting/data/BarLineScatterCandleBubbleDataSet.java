@@ -26,9 +26,9 @@ public abstract class BarLineScatterCandleBubbleDataSet<T extends Entry>
     }
 
     /**
-     * Sets the color that is used for drawing the highlight indicators. Dont
-     * forget to resolve the color using getResources().getColor(...) or
-     * Color.rgb(...).
+     * 设置用于绘制突出显示指示符的颜色
+     * <p>
+     * 不要忘记使用 getResources().getColor(...) or Color.rgb(...) 来解析颜色
      *
      * @param color
      */

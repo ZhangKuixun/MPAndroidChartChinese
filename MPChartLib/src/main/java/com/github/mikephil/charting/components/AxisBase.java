@@ -165,7 +165,7 @@ public abstract class AxisBase extends ComponentBase {
     /**
      * 将其设置为true可以绘制轴的网格线。
      *
-     * @param enabled
+     * @param enabled true，则绘制网格线
      */
     public void setDrawGridLines(boolean enabled) {
         mDrawGridLines = enabled;
@@ -182,8 +182,9 @@ public abstract class AxisBase extends ComponentBase {
 
     /**
      * 如果要画出与轴线并排的线，则将其设置为true。
+     * 默认：true
      *
-     * @param enabled
+     * @param enabled true，则绘制该行旁边的轴线
      */
     public void setDrawAxisLine(boolean enabled) {
         mDrawAxisLine = enabled;
@@ -288,7 +289,7 @@ public abstract class AxisBase extends ComponentBase {
     /**
      * 将此设置为true，以便绘制该轴的标签（这不会影响绘制网格线或轴线）。
      *
-     * @param enabled
+     * @param enabled true，则绘制轴的标签
      */
     public void setDrawLabels(boolean enabled) {
         mDrawLabels = enabled;
@@ -304,10 +305,13 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * Sets the number of label entries for the y-axis max = 25, min = 2, default: 6, be aware
-     * that this number is not fixed.
+     * 设置当前轴(x轴/y轴)的标签数量。
+     * <p>
+     * 请注意:
+     * 1.参数count范围：max＝25，min＝2，默认值：6
+     * 2.这个数字是不固定 if(force == false)，只能是近似的。如果 if(force == true)，则确切绘制指定数量的标签，但这样可能导致轴线分布不均匀。
      *
-     * @param count the number of y-axis labels that should be displayed
+     * @param count 应该显示的当前轴(x轴/y轴)标签的数量
      */
     public void setLabelCount(int count) {
 
@@ -321,10 +325,14 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * 设置y轴的标签数量。请注意，这个数字不是固定的（如果 force == false），并且只能近似。
+     * 设置当前轴(x轴/y轴)的标签数量。请注意，这个数字不是固定的（如果 force == false），并且只能近似。
+     * <p>
+     * 请注意:
+     * 1.参数count范围：max＝25，min＝2，默认值：6
+     * 2.这个数字是不固定 if(force == false)，只能是近似的。如果 if(force == true)，则确切绘制指定数量的标签，但这样可能导致轴线分布不均匀。
      *
-     * @param count 在Y轴显示标签的数量
-     * @param force 如果强制启用（true），标签的精确计数将被绘制并沿轴均匀分布 - 这可能导致轴上的数字不均匀。
+     * @param count 当前轴(x轴/y轴)应该显示的标签数量
+     * @param force 如果启用，将强制设置设置标签计数，标签的精确计数将被绘制并沿轴均匀分布 - 这可能导致轴上的数值不均匀。
      */
     public void setLabelCount(int count, boolean force) {
 
@@ -685,7 +693,7 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     /**
-     * 设置此轴的自定义最大值。 如果设置，此值将不会根据提供的数据自动计算.
+     * 为该轴设置自定义最大值。 如果设置，此值将不会根据提供的数据自动计算.
      * 使用 resetAxisMaxValue() 来撤消此操作。
      *
      * @param max

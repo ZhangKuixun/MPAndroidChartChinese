@@ -148,7 +148,8 @@ public class CombinedData extends BarLineScatterCandleBubbleData<IBarLineScatter
     }
 
     public BarLineScatterCandleBubbleData getDataByIndex(int index) {
-        return getAllData().get(index);
+        List<BarLineScatterCandleBubbleData> allData = getAllData();
+        return allData.get(index);
     }
 
     @Override
@@ -168,18 +169,22 @@ public class CombinedData extends BarLineScatterCandleBubbleData<IBarLineScatter
     }
 
     /**
-     * Get the Entry for a corresponding highlight object
+     * 获取对应的高亮对象的条目
      *
-     * @param highlight
-     * @return the entry that is highlighted
+     * @param highlight 高亮对象
+     * @return 高亮显示的条目
      */
     @Override
     public Entry getEntryForHighlight(Highlight highlight) {
 
-        if (highlight.getDataIndex() >= getAllData().size())
+        int dataIndex = highlight.getDataIndex();
+        if (dataIndex ==-1)
             return null;
 
-        ChartData data = getDataByIndex(highlight.getDataIndex());
+        if (dataIndex >= getAllData().size())
+            return null;
+
+        ChartData data = getDataByIndex(dataIndex);
 
         if (highlight.getDataSetIndex() >= data.getDataSetCount())
             return null;

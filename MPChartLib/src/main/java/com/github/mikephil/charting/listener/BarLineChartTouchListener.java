@@ -11,11 +11,13 @@ import android.view.animation.AnimationUtils;
 
 import com.github.mikephil.charting.charts.BarLineChartBase;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarLineScatterCandleBubbleData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+import com.github.mikephil.charting.utils.MPPointD;
 import com.github.mikephil.charting.utils.MPPointF;
 import com.github.mikephil.charting.utils.Utils;
 import com.github.mikephil.charting.utils.ViewPortHandler;
@@ -398,10 +400,25 @@ public class BarLineChartTouchListener extends ChartTouchListener<BarLineChartBa
                             h.canZoomOutMoreX() :
                             h.canZoomInMoreX();
 
+//                    if (canZoomMoreX) {
+//
+//                        mMatrix.set(mSavedMatrix);
+//                        mMatrix.postScale(scaleX, 1f, t.x, t.y);
+//
+//                        if (l != null)
+//                            l.onChartScale(event, scaleX, 1f);
+//                    }
                     if (canZoomMoreX) {
 
                         mMatrix.set(mSavedMatrix);
-                        mMatrix.postScale(scaleX, 1f, t.x, t.y);
+                        // 这里是自己改的
+                        MPPointD point = mChart.getTransformer(YAxis.AxisDependency.LEFT).getValuesByTouchPoint(mTouchPointCenter.x, mTouchPointCenter.y);
+                        if (mChart.getRealCount() > 0 && point.x > mChart.getRealCount()) {
+                            mMatrix.postScale(scaleX, 1f, 0, t.y);
+                        } else {
+                            // 这里是原来的
+                            mMatrix.postScale(scaleX, 1f, t.x, t.y);
+                        }
 
                         if (l != null)
                             l.onChartScale(event, scaleX, 1f);

@@ -52,6 +52,7 @@ public class Highlight {
 
     /**
      * the x-position (pixels) on which this highlight object was last drawn
+     * 最后突出显示该突出对象的x位置（像素）。
      */
     private float mDrawX;
 
@@ -191,6 +192,7 @@ public class Highlight {
 
     /**
      * Returns the x-position in pixels where this highlight object was last drawn.
+     * 返回的X轴位置,是最后绘制此高亮对象的像素。
      *
      * @return
      */

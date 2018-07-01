@@ -152,7 +152,8 @@ public abstract class ComponentBase {
     }
 
     /**
-     * 设置轴启用或禁用。 如果禁用，无论任何其他设置如何，都不会绘制轴的任何部分
+     * 如果设置true，这个组件被启用或者被绘制。如果禁用，将不绘制该组件。
+     * 默认: true
      *
      * @param enabled
      */

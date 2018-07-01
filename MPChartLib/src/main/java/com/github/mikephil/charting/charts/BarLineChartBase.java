@@ -1075,7 +1075,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     *在图表上将其设置为true，以便在完全缩小时在图表上拖动时突出显示。 默认值：true
+     * 在图表上将其设置为true，以便在完全缩小时在图表上拖动时突出显示。 默认值：true
      */
     public void setHighlightPerDragEnabled(boolean enabled) {
         mHighlightPerDragEnabled = enabled;
@@ -1150,9 +1150,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * 启用或者禁用缩放交互（X轴和Y轴）
+     * 启用/禁用缩放图表上的两个轴
      *
-     * @param enabled 设置为true，启用x轴和y轴上缩放（缩放手势）（这不影响拖动）。
+     * @param enabled 设置为true，启用x轴和y轴上缩放（缩放手势）（这不影响拖动）
      */
     public void setScaleEnabled(boolean enabled) {
         this.mScaleXEnabled = enabled;
@@ -1170,6 +1170,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
 
     /**
      * 启用或者禁用Y轴缩放交互
+     * 默认：true
      *
      * @param enabled true=启用，false=禁用
      */
@@ -1213,6 +1214,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     /**
      * When enabled, the borders rectangle will be rendered.
      * If this is enabled, there is no point drawing the axis-lines of x- and y-axis.
+     * 启用/禁用绘制图表边框（chart周围的线）
      *
      * @param enabled
      */
@@ -1251,9 +1253,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Sets the width of the border lines in dp.
+     * 设置 chart 边界线的宽度，单位 dp
      *
-     * @param width
+     * @param width 边界线的宽度
      */
     public void setBorderWidth(float width) {
         mBorderPaint.setStrokeWidth(Utils.convertDpToPixel(width));
@@ -1366,10 +1368,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected MPPointD posForGetLowestVisibleX = MPPointD.getInstance(0, 0);
 
     /**
-     * Returns the lowest x-index (value on the x-axis) that is still visible on
-     * the chart.
-     *
-     * @return
+     * 返回在图表上仍然可见的最低x索引（x轴上的值）
      */
     @Override
     public float getLowestVisibleX() {
@@ -1385,10 +1384,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected MPPointD posForGetHighestVisibleX = MPPointD.getInstance(0, 0);
 
     /**
-     * Returns the highest x-index (value on the x-axis) that is still visible
-     * on the chart.
-     *
-     * @return
+     * 返回在图表上仍然可见的最高x指数（x轴上的值）
      */
     @Override
     public float getHighestVisibleX() {
@@ -1587,12 +1583,13 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * 指示是否启用y轴上的自动缩放的标志。 如果启用，只要视口更改，y轴就会自动调整到当前x轴范围的最小和最大y值。
-     * 这对于显示财务数据的图表尤其有用。 默认值：false
+     * 标志，指示自动缩放在y轴已启用/禁用
+     * <p>
+     * 如果启用，只要视口更改，y轴就会自动调整到当前x轴范围的最小和最大y值,这对于显示财务数据的图表尤其有用
+     * <p>
+     * 默认值：false
      *
-     * @param enabled the y axis automatically adjusts to the min and max y
-     *                values of the current x axis range whenever the viewport
-     *                changes
+     * @param enabled Y轴自动调整到当前X轴范围的最小和最大Y值，每当视口改变时
      */
     public void setAutoScaleMinMaxEnabled(boolean enabled) {
         mAutoScaleMinMaxEnabled = enabled;

@@ -293,7 +293,7 @@ public class PieChart extends PieRadarChartBase<PieData> {
     }
 
     /**
-     * This will throw an exception, PieChart has no XAxis object.
+     * 饼图没有 XAxis 对象，将抛出一个异常。
      *
      * @return
      */
