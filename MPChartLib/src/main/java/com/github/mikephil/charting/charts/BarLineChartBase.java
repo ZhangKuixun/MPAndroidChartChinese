@@ -1203,9 +1203,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * set this to true to draw the grid background, false if not
+     * 绘制网格背景
      *
-     * @param enabled
+     * @param enabled 设置为true绘制网格背景，否则不绘制
      */
     public void setDrawGridBackground(boolean enabled) {
         mDrawGridBackground = enabled;
@@ -1444,10 +1444,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Returns the right y-axis object. In the horizontal bar-chart, this is the
-     * bottom axis.
-     *
-     * @return
+     * 返回右边Y轴对象。在水平柱状图(bar-chart)中，这是底轴。
      */
     public YAxis getAxisRight() {
         return mAxisRight;

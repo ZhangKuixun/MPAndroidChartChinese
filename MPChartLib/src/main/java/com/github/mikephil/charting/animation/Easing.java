@@ -5,7 +5,7 @@ import android.animation.TimeInterpolator;
 import android.support.annotation.RequiresApi;
 
 /**
- * Easing options.
+ * 动画插值器函数
  *
  * @author Daniel Cohen Gindi
  * @author Mick Ashton
@@ -307,7 +307,7 @@ public class Easing {
             float p = 0.3f;
             float s = p / DOUBLE_PI * (float) Math.asin(1f);
             return -((float) Math.pow(2f, 10f * (input -= 1f))
-                    *(float) Math.sin((input - s) * DOUBLE_PI / p));
+                    * (float) Math.sin((input - s) * DOUBLE_PI / p));
         }
     };
 

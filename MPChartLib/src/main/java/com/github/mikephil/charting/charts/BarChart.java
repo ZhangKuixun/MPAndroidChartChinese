@@ -94,7 +94,8 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
             return null;
         } else {
             Highlight h = getHighlighter().getHighlight(x, y);
-            if (h == null || !isHighlightFullBarEnabled()) return h;
+            if (h == null || !isHighlightFullBarEnabled())
+                return h;
 
             // For isHighlightFullBarEnabled, remove stackIndex
             return new Highlight(h.getX(), h.getY(),
@@ -228,7 +229,9 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
     /**
      * Adds half of the bar width to each side of the x-axis range in order to allow the bars of the barchart to be
      * fully displayed.
-     * Default: false
+     * <p>
+     * 设置X轴范围两侧,预留柱状图一半的宽度。
+     * 默认: false
      *
      * @param enabled
      */

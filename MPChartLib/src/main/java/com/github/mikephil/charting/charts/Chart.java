@@ -805,7 +805,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * ################ ################ ################ ################
-     * ANIMATIONS ONLY WORK FOR API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 动画只适用于API 11 (Android 3.0.x) 或者更高.
      */
     /** CODE BELOW FOR PROVIDING EASING FUNCTIONS */
 
@@ -856,13 +856,12 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Animates the rendering of the chart on the y-axis with the specified
-     * animation time. If animate(...) is called, no further calling of
-     * invalidate() is necessary to refresh the chart. ANIMATIONS ONLY WORK FOR
-     * API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 指定时间内在Y轴上绘制图表时的动画。
+     * <p>
+     * 如果调用了 animate(...)，则不需要调用 invalidate() 来刷新图表。动画只适用于API 11（Android 3.0.x）和更高。
      *
-     * @param durationMillis
-     * @param easing         a custom easing function to be used on the animation phase
+     * @param durationMillis 指定的动画时间
+     * @param easing         在动画阶段使用的自定义插值器
      */
     @RequiresApi(11)
     public void animateY(int durationMillis, EasingFunction easing) {
@@ -1122,7 +1121,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set an extra offset to be appended to the viewport's bottom
+     * 设置一个额外的偏移量附加到视口底部
      */
     public void setExtraBottomOffset(float offset) {
         mExtraBottomOffset = Utils.convertDpToPixel(offset);
