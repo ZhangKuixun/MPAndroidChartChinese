@@ -57,7 +57,7 @@ dependencies {
 
 <!-- <dependencies> section of pom.xml -->
 <dependency>
-    <groupId>com.github.PhilJay</groupId>
+    <groupId>com.github.ZhangKuixun</groupId>
     <artifactId>MPAndroidChart</artifactId>
     <version>v3.0.3</version>
 </dependency>
