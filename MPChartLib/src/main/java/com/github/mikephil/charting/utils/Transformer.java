@@ -163,10 +163,8 @@ public class Transformer {
     protected float[] valuePointsForGenerateTransformedValuesLine = new float[1];
 
     /**
-     * Transforms an List of Entry into a float array containing the x and
-     * y values transformed with all matrices for the LINECHART.
+     * 将条目 Entry 转换为包含x和y值的浮点数组，这些值与线图（LINE CHART）的所有矩阵一起转换。
      *
-     * @param data
      * @return
      */
     public float[] generateTransformedValuesLine(ILineDataSet data,
