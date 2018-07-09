@@ -15,7 +15,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.renderer.BarChartRenderer;
 
 /**
- * Chart that draws bars.
+ * 绘制条形图
  *
  * @author Philipp Jahoda
  */
@@ -27,12 +27,12 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
     protected boolean mHighlightFullBarEnabled = false;
 
     /**
-     * if set to true, all values are drawn above their bars, instead of below their top
+     * 如果设置为true，所有值都绘制在它们的条上，而不是在它们的顶部。
      */
     private boolean mDrawValueAboveBar = true;
 
     /**
-     * if set to true, a grey area is drawn behind each bar that indicates the maximum value
+     * 如果设置为true，会在各条 bar 后面绘制 “灰色 bar”，用以指示最大值。
      */
     private boolean mDrawBarShadow = false;
 
@@ -153,9 +153,7 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
     }
 
     /**
-     * If set to true, all values are drawn above their bars, instead of below their top.
-     *
-     * @param enabled
+     * 如果设置为true，所有值都高于其 bar 的，而不是低于其顶部。
      */
     public void setDrawValueAboveBar(boolean enabled) {
         mDrawValueAboveBar = enabled;
@@ -171,10 +169,7 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
     }
 
     /**
-     * If set to true, a grey area is drawn behind each bar that indicates the maximum value. Enabling his will reduce
-     * performance by about 50%.
-     *
-     * @param enabled
+     * 如果设置为true，每个条形图后面都有灰色区域，用以指示最大值。使性能降低约50%。
      */
     public void setDrawBarShadow(boolean enabled) {
         mDrawBarShadow = enabled;
@@ -243,11 +238,12 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
      * Groups all BarDataSet objects this data object holds together by modifying the x-value of their entries.
      * Previously set x-values of entries will be overwritten. Leaves space between bars and groups as specified
      * by the parameters.
-     * Calls notifyDataSetChanged() afterwards.
+     * 分组所有BarDataSet对象，该数据对象通过修改其条目的X值来保持在一起。以前设置的条目X值将被覆盖。在参数指定的条和组之间留出空间。
+     * 调用notifyDataSetChanged()之后
      *
-     * @param fromX      the starting point on the x-axis where the grouping should begin
-     * @param groupSpace the space between groups of bars in values (not pixels) e.g. 0.8f for bar width 1f
-     * @param barSpace   the space between individual bars in values (not pixels) e.g. 0.1f for bar width 1f
+     * @param fromX      确定 XAxis 上分组条目开始的位置。
+     * @param groupSpace 确定每组条目之间留下的空间。(不是px) 列如：0.8f，条目宽度是1f
+     * @param barSpace   确定组中单个条目之间的空间。(不是px) 列如：0.1f，条目宽度是1f
      */
     public void groupBars(float fromX, float groupSpace, float barSpace) {
 
