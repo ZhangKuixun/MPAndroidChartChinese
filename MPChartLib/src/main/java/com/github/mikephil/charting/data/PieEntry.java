@@ -28,6 +28,10 @@ public class PieEntry extends Entry {
         super(0f, value, icon, data);
     }
 
+    /**
+     * @param value 在PieChart中绘制为饼图的实际“值”
+     * @param label 作为第一个参数绘制的那部分饼的描述
+     */
     public PieEntry(float value, String label) {
         super(0f, value);
         this.label = label;

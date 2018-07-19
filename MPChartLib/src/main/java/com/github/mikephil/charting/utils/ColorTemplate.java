@@ -11,6 +11,9 @@ import java.util.List;
  * Class that holds predefined color integer arrays (e.g.
  * ColorTemplate.VORDIPLOM_COLORS) and convenience methods for loading colors
  * from resources.
+ * <p>
+ * 一些预定义的颜色值保存在这个类中（例如，ColorTemplate.VORDIPLOM_COLORS），
+ * 并且提供便利的方法，方便我们将颜色资源转换成真正的颜色。通过给DataSet直接指定颜色来代替ColorTemplate，同时你可以给每个DataSet分别设计样式。
  *
  * @author Philipp Jahoda
  */

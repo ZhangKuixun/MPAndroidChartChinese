@@ -995,7 +995,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * 为图表设置选择监听器
+     * 为图表设置选择监听器（设置表格上的值，被点击的时候的回调函数）
      *
      * @param l 选择监听器
      */

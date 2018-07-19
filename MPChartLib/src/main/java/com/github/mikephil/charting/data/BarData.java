@@ -48,10 +48,13 @@ public class BarData extends BarLineScatterCandleBubbleData<IBarDataSet> {
      * Previously set x-values of entries will be overwritten. Leaves space between bars and groups as specified
      * by the parameters.
      * Do not forget to call notifyDataSetChanged() on your BarChart object after calling this method.
+     * <p>
+     * 分组所有BarDataSet对象，该数据对象通过修改其条目的X值来保持在一起。以前设置的条目X值将被覆盖。在参数指定的条和组之间留出空间。
+     * 在调用此方法之后，不要忘记在 BarChart 对象上调用 notifyDataSetChanged()。
      *
-     * @param fromX      the starting point on the x-axis where the grouping should begin
-     * @param groupSpace the space between groups of bars in values (not pixels) e.g. 0.8f for bar width 1f
-     * @param barSpace   the space between individual bars in values (not pixels) e.g. 0.1f for bar width 1f
+     * @param fromX      确定 XAxis 上分组条目开始的位置。
+     * @param groupSpace 确定每组条目之间留下的空间。(不是px) 列如：0.8f，条目宽度是1f
+     * @param barSpace   确定组中单个条目之间的空间。(不是px) 列如：0.1f，条目宽度是1f
      */
     public void groupBars(float fromX, float groupSpace, float barSpace) {
 

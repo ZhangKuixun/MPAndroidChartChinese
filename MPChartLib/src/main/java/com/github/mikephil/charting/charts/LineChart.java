@@ -10,6 +10,7 @@ import com.github.mikephil.charting.renderer.LineChartRenderer;
 
 /**
  * Chart that draws lines, surfaces, circles, ...
+ * 绘制线条、曲面、圆圈的图表
  *
  * @author Philipp Jahoda
  */

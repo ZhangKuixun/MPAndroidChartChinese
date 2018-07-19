@@ -6,7 +6,14 @@ import android.graphics.drawable.Drawable;
 import com.github.mikephil.charting.highlight.Range;
 
 /**
- * Entry class for the BarChart. (especially stacked bars)
+ * 堆积柱形图。
+ * <p>
+ * 堆积柱形图的使用方式和正常柱形图的使用方式基本相同。有点差异的是 BarEntry 的创建方式不太一样，
+ * 在堆叠柱形图的使用中，需要使用到 BarEntry 的另一个构造方法：
+ * public BarEntry(float x, float [] yValues) { ... }
+ * 这个构造方法允许传入多个 yValues，代表每个堆积的柱形图的值。下面有个例子：
+ * BarEntry stackedEntry = new BarEntry(0f, new float[] { 10, 20, 30 });
+ * 这个BarEntry由3个堆积的值组成，高度分别是10,20,30
  *
  * @author Philipp Jahoda
  */
@@ -34,7 +41,7 @@ public class BarEntry extends Entry {
     private float mPositiveSum;
 
     /**
-     * Constructor for normal bars (not stacked).
+     * 正常条的构造函数（不堆积）。
      *
      * @param x
      * @param y

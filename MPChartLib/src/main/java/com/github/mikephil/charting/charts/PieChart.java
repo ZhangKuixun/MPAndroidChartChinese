@@ -20,7 +20,9 @@ import com.github.mikephil.charting.utils.Utils;
 import java.util.List;
 
 /**
- * View that represents a pie chart. Draws cake like slices.
+ * 表示饼图的视图。
+ * <p>
+ * 与其他图表类型不同，PieChart以PieEntry对象的形式获取数据。PieEntry的构造方法如下：
  *
  * @author Philipp Jahoda
  */
