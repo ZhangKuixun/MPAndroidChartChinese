@@ -147,12 +147,8 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
         return mCubicIntensity;
     }
 
-
     /**
-     * Sets the radius of the drawn circles.
-     * Default radius = 4f, Min = 1f
-     *
-     * @param radius
+     * 设置绘制圆的半径。默认半径＝4f，min＝1f。
      */
     public void setCircleRadius(float radius) {
 
@@ -242,8 +238,7 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     /**
-     * set this to true to enable the drawing of circle indicators for this
-     * DataSet, default true
+     * 将此设置为true，启用绘制当前数据集的圆形指示符，默认为true
      *
      * @param enabled
      */
@@ -379,7 +374,7 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     /**
-     * Set this to true to allow drawing a hole in each data circle.
+     * 将此设置为true，以允许在每个数据点上绘制一个孔。
      *
      * @param enabled
      */

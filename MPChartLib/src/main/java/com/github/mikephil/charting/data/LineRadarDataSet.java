@@ -53,9 +53,9 @@ public abstract class LineRadarDataSet<T extends Entry> extends LineScatterCandl
     }
 
     /**
-     * Sets the color that is used for filling the area below the line.
-     * Resets an eventually set "fillDrawable".
-     * 设定填充线表面的颜色。
+     * 设置填充颜色。
+     * <p>
+     * 设置用于填充线下区域的颜色。最终设置“fillDrawable”。
      *
      * @param color
      */
@@ -86,7 +86,8 @@ public abstract class LineRadarDataSet<T extends Entry> extends LineScatterCandl
 
     /**
      * sets the alpha value (transparency) that is used for filling the line
-     * surface (0-255), default: 85
+     * surface (0-255), default: 85。
+     * <p>
      * 设定填充线面的alpha值（即透明度 0-255）。默认：85。255 =完全不透明，0 =完全透明。
      *
      * @param alpha

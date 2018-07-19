@@ -178,10 +178,10 @@ public interface IDataSet<T extends Entry> {
     void addEntryOrdered(T e);
 
     /**
-     * Removes the first Entry (at index 0) of this DataSet from the entries array.
-     * Returns true if successful, false if not.
-     *
-     * @return
+     * 移除第一个值。
+     * <p>
+     * 从条目数组中删除当前数据集的第一个条目（index 0）。
+     * 删除成功返回true，否则返回false。
      */
     boolean removeFirst();
 
@@ -495,10 +495,9 @@ public interface IDataSet<T extends Entry> {
     MPPointF getIconsOffset();
 
     /**
-     * Set the visibility of this DataSet. If not visible, the DataSet will not
-     * be drawn to the chart upon refreshing it.
-     *
-     * @param visible
+     * 设置是否显示
+     * <p>
+     * 设置此数据集的可见性。如果不可见，在刷新数据集时，数据集不会被绘制到图表中。
      */
     void setVisible(boolean visible);
 
