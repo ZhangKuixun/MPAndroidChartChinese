@@ -136,11 +136,9 @@ public interface IDataSet<T extends Entry> {
     int getEntryIndex(float xValue, float closestToY, DataSet.Rounding rounding);
 
     /**
-     * Returns the position of the provided entry in the DataSets Entry array.
-     * Returns -1 if doesn't exist.
-     *
-     * @param e
-     * @return
+     * 返回 DataSets 条目数组中提供的条目的位置
+     * <p>
+     * 如果不存在，返回1。
      */
     int getEntryIndex(T e);
 

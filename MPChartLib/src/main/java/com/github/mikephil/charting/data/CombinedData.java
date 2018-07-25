@@ -169,7 +169,7 @@ public class CombinedData extends BarLineScatterCandleBubbleData<IBarLineScatter
     }
 
     /**
-     * 获取对应的高亮对象的条目
+     * 获取对应的高亮对象的条目（Entry）
      *
      * @param highlight 高亮对象
      * @return 高亮显示的条目

@@ -36,7 +36,7 @@ public class Highlight {
     private int mDataIndex = -1;
 
     /**
-     * the index of the dataset the highlighted value is in
+     * dataSet 高亮值的下标
      */
     private int mDataSetIndex;
 
@@ -89,13 +89,12 @@ public class Highlight {
     }
 
     /**
-     * Constructor, only used for stacked-barchart.
+     * 构造函数，柱状图
      *
-     * @param x            the index of the highlighted value on the x-axis
-     * @param y            the y-value of the highlighted value
-     * @param dataSetIndex the index of the DataSet the highlighted value belongs to
-     * @param stackIndex   references which value of a stacked-bar entry has been
-     *                     selected
+     * @param x            X轴上高亮值的索引
+     * @param y            高亮的Y值
+     * @param dataSetIndex 突出显示值的 DataSet 的索引
+     * @param stackIndex   已选择柱状图条目的值的引用
      */
     public Highlight(float x, float y, float xPx, float yPx, int dataSetIndex, int stackIndex, YAxis.AxisDependency axis) {
         this(x, y, xPx, yPx, dataSetIndex, axis);
@@ -103,41 +102,35 @@ public class Highlight {
     }
 
     /**
-     * returns the x-value of the highlighted value
-     *
-     * @return
+     * 返回x值的高亮值
      */
     public float getX() {
         return mX;
     }
 
     /**
-     * returns the y-value of the highlighted value
-     *
-     * @return
+     * 返回Y值中的高亮值
      */
     public float getY() {
         return mY;
     }
 
     /**
-     * returns the x-position of the highlight in pixels
+     * 返回X轴位置的高亮像素（单位：px）
      */
     public float getXPx() {
         return mXPx;
     }
 
     /**
-     * returns the y-position of the highlight in pixels
+     * 返回Y轴位置的高亮值（单位：px）
      */
     public float getYPx() {
         return mYPx;
     }
 
     /**
-     * the index of the data object - in case it refers to more than one
-     *
-     * @return
+     * 数据对象的索引-如果它引用多于一个
      */
     public int getDataIndex() {
         return mDataIndex;
@@ -148,9 +141,7 @@ public class Highlight {
     }
 
     /**
-     * returns the index of the DataSet the highlighted value is in
-     *
-     * @return
+     * 返回 DataSet 中突出显示的值的索引
      */
     public int getDataSetIndex() {
         return mDataSetIndex;
