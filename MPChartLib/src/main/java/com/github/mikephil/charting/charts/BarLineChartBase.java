@@ -47,8 +47,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
         extends Chart<T> implements BarLineScatterCandleBubbleDataProvider {
 
     /**
-     * the maximum number of entries to which values will be drawn
-     * (entry numbers greater than this value will cause value-labels to disappear)
+     * 将绘制值的最大条目数
+     * <p>
+     * 大于此值的条目数会导致值标签不可见
      */
     protected int mMaxVisibleCount = 100;
 
@@ -70,13 +71,12 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected boolean mDoubleTapToZoomEnabled = true;
 
     /**
-     * flag that indicates if highlighting per dragging over a fully zoomed out
-     * chart is enabled
+     * 指示是否在一个完全缩小的图表上突出显示每次的拖动
      */
     protected boolean mHighlightPerDragEnabled = true;
 
     /**
-     * if true, dragging is enabled for the chart
+     * 如果为true，启用图表拖动操作
      */
     private boolean mDragXEnabled = true;
     private boolean mDragYEnabled = true;
@@ -92,7 +92,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected Paint mBorderPaint;
 
     /**
-     * flag indicating if the grid background should be drawn or not
+     * 如果启用，chart 绘图区后面的背景矩形将绘制
      */
     protected boolean mDrawGridBackground = false;
 
@@ -1061,10 +1061,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * sets the number of maximum visible drawn values on the chart only active
-     * when setDrawValues() is enabled
-     *
-     * @param count
+     * 设置最大可见绘制的 chartCount 的数量。只在 setDrawValues() 设置为true时有效
      */
     public void setMaxVisibleValueCount(int count) {
         this.mMaxVisibleCount = count;
@@ -1204,6 +1201,8 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
 
     /**
      * 绘制网格背景
+     * <p>
+     * 如果是 true 则 setGridBackgroundColor 和 setBackgroundColor 的 color 无效
      *
      * @param enabled 设置为true绘制网格背景，否则不绘制
      */
@@ -1212,11 +1211,9 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * When enabled, the borders rectangle will be rendered.
-     * If this is enabled, there is no point drawing the axis-lines of x- and y-axis.
      * 启用/禁用绘制图表边框（chart周围的线）
-     *
-     * @param enabled
+     * <p>
+     * 绘制X轴和Y轴的轴线是没有意义的
      */
     public void setDrawBorders(boolean enabled) {
         mDrawBorders = enabled;
@@ -1262,9 +1259,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Sets the color of the chart border lines.
-     *
-     * @param color
+     * 设置 chart 边框线的颜色
      */
     public void setBorderColor(int color) {
         mBorderPaint.setColor(color);

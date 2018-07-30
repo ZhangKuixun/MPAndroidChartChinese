@@ -6,10 +6,6 @@
 
    notifyDataChanged()：让chart知道它依赖的基础数据已经改变，并执行所有必要的重新计算（比如偏移量，lenged，最大值，最小值...）。在动态添加数据时需要用到。
 
-2、打印日志
-
-   setLogEnable(boolean enabled)：设置为true将激活chart的logcat输出。但这不利于性能，如果不是必要的，应保持禁用。
-
 3、chart属性
 
    setBackgroundColor(int color)：设置背景颜色，将覆盖整个图表视图。此外，背景颜色可以在布局文件.xml中进行设置。
