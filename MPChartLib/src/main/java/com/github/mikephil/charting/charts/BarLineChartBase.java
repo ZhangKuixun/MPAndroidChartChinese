@@ -1086,9 +1086,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * 设置网格背景应与绘制的颜色。
-     *
-     * @param color
+     * 设置网格背景色与绘制的颜色。
      */
     public void setGridBackgroundColor(int color) {
         mGridBackgroundPaint.setColor(color);

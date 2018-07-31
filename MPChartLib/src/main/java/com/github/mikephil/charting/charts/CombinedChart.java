@@ -238,12 +238,13 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
     protected void drawMarkers(Canvas canvas) {
 
         // if there is no marker view or drawing marker is disabled
-        if (mMarker == null || !isDrawMarkersEnabled() || !valuesToHighlight())
+        boolean b = mMarker == null;
+        boolean b1 = !isDrawMarkersEnabled();
+        boolean b2 = !valuesToHighlight();
+        if (b || b1 || b2)
             return;
 
-        for (int i = 0; i < mIndicesToHighlight.length; i++) {
-
-            Highlight highlight = mIndicesToHighlight[i];
+        for (Highlight highlight : mIndicesToHighlight) {
 
             IDataSet set = mData.getDataSetByHighlight(highlight);
 
