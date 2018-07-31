@@ -65,7 +65,7 @@ public class LineChartActivity2 extends DemoBase implements OnSeekBarChangeListe
         mChart.setScaleEnabled(true);//缩放图表上的两个轴
         mChart.setHighlightPerDragEnabled(true);//设置为true，允许每个图表表面拖过，当它完全缩小突出
         mChart.setPinchZoom(true);//如果是false,缩放在x轴和y轴分别完成
-        mChart.setDrawGridBackground(false);//是否绘制背景颜色,如果是true则setGridBackgroundColor和setBackgroundColor的color无效
+        mChart.setDrawGridBackground(false);//是否绘制背景颜色,如果是 true 则 setGridBackgroundColor 和 setBackgroundColor 的color无效
         mChart.setBackgroundColor(Color.LTGRAY);// 设置背景颜色(灰色)
 
         setData(20, 30);//添加数据

@@ -57,7 +57,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 /**
- * Baseclass of all Chart-Views.
+ * 所有图表视图的基类
  *
  * @author Philipp Jahoda
  */
@@ -68,31 +68,27 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     public static final String LOG_TAG = "MPAndroidChart";
 
     /**
-     * flag that indicates if logging is enabled or not
+     * 标志是否启用日志
      */
     protected boolean mLogEnabled = false;
 
     /**
-     * object that holds all data that was originally set for the chart, before
-     * it was modified or any filtering algorithms had been applied
+     * 为图表设置的所有原始数据
      */
     protected T mData = null;
 
     /**
-     * Flag that indicates if highlighting per tap (touch) is enabled
+     * 是否启用每个节点（触摸）高亮显示。
      */
     protected boolean mHighLightPerTapEnabled = true;
 
     /**
-     * If set to true, chart continues to scroll after touch up
+     * 如果设置为true，手指滑动抛掷图表后继续减速滚动
      */
     private boolean mDragDecelerationEnabled = true;
 
     /**
-     * Deceleration friction coefficient in [0 ; 1] interval, higher values
-     * indicate that speed will decrease slowly, for example if it set to 0, it
-     * will stop immediately. 1 is an invalid value, and will be converted to
-     * 0.999f automatically.
+     * 减速摩擦系数在[0;1]区间中，数值越高表示速度回缓慢下降，例如，如果它设置为0，它将立即停止。1是无效值，将自动转换为0.999F。
      */
     private float mDragDecelerationFrictionCoef = 0.9f;
 
@@ -119,12 +115,12 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     protected XAxis mXAxis;
 
     /**
-     * if true, touch gestures are enabled on the chart
+     * 如果设置为true，在图表上启用触摸手势
      */
     protected boolean mTouchEnabled = true;
 
     /**
-     * the object responsible for representing the description text
+     * 设置图表的描述文字，会显示在图表的右下角
      */
     protected Description mDescription;
 
@@ -452,8 +448,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     /** BELOW THIS CODE FOR HIGHLIGHTING */
 
     /**
-     * array of Highlight objects that reference the highlighted slices in the
-     * chart
+     * 高亮显示值，在数据集中的显示对象数组
      */
     protected Highlight[] mIndicesToHighlight;
 
@@ -543,24 +538,21 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * 在给定的数据集中突出给定的X值的Y值。提供-1作为 dataSetIndex 指标来取消所有突出显示。
-     * 此方法将调用侦听器。
+     * 高亮给定 xIndex 在数据集的值。设置 xIndex 或 dataSetIndex 为-1撤销所有高亮。
      *
-     * @param x            The x-value to highlight
-     * @param dataSetIndex The dataset index to search in
+     * @param x            高亮显示的X值
+     * @param dataSetIndex dataset 的下标，根据下标搜索数据索引
      */
     public void highlightValue(float x, int dataSetIndex) {
         highlightValue(x, dataSetIndex, true);
     }
 
     /**
-     * Highlights the value at the given x-value and y-value in the given DataSet.
-     * Provide -1 as the dataSetIndex to undo all highlighting.
-     * This method will call the listener.
+     * 在给定的数据集中突出显示X值和Y值。提供-1作为 dataSet 索引来取消所有突出显示。该方法将调用侦听器。
      *
-     * @param x            The x-value to highlight
-     * @param y            The y-value to highlight. Supply `NaN` for "any"
-     * @param dataSetIndex The dataset index to search in
+     * @param x            高亮显示的X值
+     * @param y            高亮显示的Y值 Supply `NaN` for "any"
+     * @param dataSetIndex dataset 的下标，根据下标搜索数据索引
      */
     public void highlightValue(float x, float y, int dataSetIndex) {
         highlightValue(x, y, dataSetIndex, true);
@@ -578,13 +570,12 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Highlights any y-value at the given x-value in the given DataSet.
-     * Provide -1 as the dataSetIndex to undo all highlighting.
+     * 在给定的数据集中突出给定的X值的Y值。提供-1作为数据集索引以撤销所有突出显示。
      *
-     * @param x            The x-value to highlight
-     * @param y            The y-value to highlight. Supply `NaN` for "any"
-     * @param dataSetIndex The dataset index to search in
-     * @param callListener Should the listener be called for this change
+     * @param x            高亮显示的X值
+     * @param y            高亮显示的X值 Supply `NaN` for "any"
+     * @param dataSetIndex dataset 的下标，根据下标搜索数据索引
+     * @param callListener listener 是否应该为此改变
      */
     public void highlightValue(float x, float y, int dataSetIndex, boolean callListener) {
 
@@ -605,12 +596,10 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Highlights the value selected by touch gesture. Unlike
-     * highlightValues(...), this generates a callback to the
-     * OnChartValueSelectedListener.
+     * 强调触摸手势选择的价值。与highlightValues(...)不同，这会生成对 OnChartValueSelectedListener 的回调。
      *
-     * @param high         - the highlight object
-     * @param callListener - call the listener
+     * @param high         - 高亮对象
+     * @param callListener - 回调监听
      */
     public void highlightValue(Highlight high, boolean callListener) {
 
@@ -1193,9 +1182,9 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * 将此设置为 false 以禁用所有在图表上的手势和触摸，默认值为：true
-     *
-     * @param enabled
+     * 将此设置为 false 以禁用所有在图表上的手势和触摸
+     * <p>
+     * 默认值为：true
      */
     public void setTouchEnabled(boolean enabled) {
         this.mTouchEnabled = enabled;
@@ -1231,8 +1220,6 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * 为图表设置新的描述对象。
-     *
-     * @param desc
      */
     public void setDescription(Description desc) {
         this.mDescription = desc;
