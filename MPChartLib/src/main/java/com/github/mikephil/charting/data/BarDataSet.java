@@ -2,6 +2,7 @@
 package com.github.mikephil.charting.data;
 
 import android.graphics.Color;
+import android.support.annotation.ColorInt;
 
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
@@ -157,7 +158,7 @@ public class BarDataSet extends BarLineScatterCandleBubbleDataSet<BarEntry> impl
      *
      * @param color
      */
-    public void setBarShadowColor(int color) {
+    public void setBarShadowColor(@ColorInt int color) {
         mBarShadowColor = color;
     }
 

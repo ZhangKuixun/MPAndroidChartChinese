@@ -4,7 +4,7 @@ package com.github.mikephil.charting.components;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
-import android.graphics.Typeface;
+import android.support.annotation.ColorInt;
 
 import com.github.mikephil.charting.utils.Utils;
 
@@ -122,7 +122,7 @@ public class LimitLine extends ComponentBase {
      *
      * @param color
      */
-    public void setLineColor(int color) {
+    public void setLineColor(@ColorInt int color) {
         mLineColor = color;
     }
 
