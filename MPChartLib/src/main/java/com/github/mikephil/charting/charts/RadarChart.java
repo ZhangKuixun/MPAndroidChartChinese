@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.RectF;
+import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 
 import com.github.mikephil.charting.components.YAxis;
@@ -265,7 +266,7 @@ public class RadarChart extends PieRadarChartBase<RadarData> {
      *
      * @param color
      */
-    public void setWebColor(int color) {
+    public void setWebColor(@ColorInt int color) {
         mWebColor = color;
     }
 
@@ -280,7 +281,7 @@ public class RadarChart extends PieRadarChartBase<RadarData> {
      *
      * @param color
      */
-    public void setWebColorInner(int color) {
+    public void setWebColorInner(@ColorInt int color) {
         mWebColorInner = color;
     }
 

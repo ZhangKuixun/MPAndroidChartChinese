@@ -302,8 +302,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Clears the chart from all data (sets it to null) and refreshes it (by
-     * calling invalidate()).
+     * 清除图表中所有数据（将其设置为NULL）并刷新它（通过调用 invalidate()）。
      */
     public void clear() {
         mData = null;
@@ -521,9 +520,11 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * 突出显示 highs 代表的高光对象表示的值。
-     * 提供NULL或空数组来撤消所有高亮。
-     * 这应该用于以编程方式高亮显示值。
+     * 高亮显示值。
+     * <p>
+     * 高亮显示点击的位置 {@param highs} 在数据集中的值。
+     * <p>
+     * 设置null或空数组则撤销所有高亮。
      **/
     public void highlightValues(Highlight[] highs) {
 
@@ -562,7 +563,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
      *
      * @param x            突出显示的X值
      * @param dataSetIndex 要搜索的数据集索引
-     * @param callListener 听众是否应该为此改变
+     * @param callListener 监听器是否应该为此改变
      */
     public void highlightValue(float x, int dataSetIndex, boolean callListener) {
         highlightValue(x, Float.NaN, dataSetIndex, callListener);
@@ -678,50 +679,48 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     /**
      * ################ ################ ################ ################
      */
-    /** BELOW CODE IS FOR THE MARKER VIEW */
+    /** 下面的代码用于标记视图 */
 
     /**
-     * if set to true, the marker view is drawn when a value is clicked
+     * 如果设置true，点击某个值时绘制标记视图
      */
     protected boolean mDrawMarkers = true;
 
     /**
-     * the view that represents the marker
+     * 表示标记的视图
      */
     protected IMarker mMarker;
 
     /**
-     * draws all MarkerViews on the highlighted positions
+     * 在突出显示的位置绘制所有标记视图(MarkerViews)
      */
     protected void drawMarkers(Canvas canvas) {
 
-        // if there is no marker view or drawing marker is disabled
+        // 如果没有标记视图或绘图标记被禁用
         if (mMarker == null || !isDrawMarkersEnabled() || !valuesToHighlight())
             return;
 
-        for (int i = 0; i < mIndicesToHighlight.length; i++) {
-
-            Highlight highlight = mIndicesToHighlight[i];
+        for (Highlight highlight : mIndicesToHighlight) {
 
             IDataSet set = mData.getDataSetByIndex(highlight.getDataSetIndex());
 
-            Entry e = mData.getEntryForHighlight(mIndicesToHighlight[i]);
+            Entry e = mData.getEntryForHighlight(highlight);
             int entryIndex = set.getEntryIndex(e);
 
-            // make sure entry not null
+            // 确保条目不为空
             if (e == null || entryIndex > set.getEntryCount() * mAnimator.getPhaseX())
                 continue;
 
             float[] pos = getMarkerPosition(highlight);
 
-            // check bounds
+            // 检查界限
             if (!mViewPortHandler.isInBounds(pos[0], pos[1]))
                 continue;
 
-            // callbacks to update the content
+            // 回调更新内容
             mMarker.refreshContent(e, highlight);
 
-            // draw the marker
+            // 绘制maker
             mMarker.draw(canvas, pos[0], pos[1]);
         }
     }
@@ -753,7 +752,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * If set to true, chart continues to scroll after touch up default: true
+     * 返回 true 图表触摸后继续滚动；默认 true
      */
     public boolean isDragDecelerationEnabled() {
         return mDragDecelerationEnabled;
@@ -767,9 +766,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns drag deceleration friction coefficient
-     *
-     * @return
+     * 返回减速摩擦系数
      */
     public float getDragDecelerationFrictionCoef() {
         return mDragDecelerationFrictionCoef;
@@ -777,8 +774,6 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * 减速摩擦系数在[0; 1]间隔，较高的值表示速度将缓慢降低，例如，如果设置为0，它将立即停止。 1是无效值，将自动转换为0.9999。
-     *
-     * @param newValue
      */
     public void setDragDecelerationFrictionCoef(float newValue) {
 

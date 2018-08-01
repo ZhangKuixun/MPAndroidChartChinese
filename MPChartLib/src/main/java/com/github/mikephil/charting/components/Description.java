@@ -12,17 +12,17 @@ import com.github.mikephil.charting.utils.Utils;
 public class Description extends ComponentBase {
 
     /**
-     * the text used in the description
+     * 描述使用的文本
      */
     private String text = "Description Label";
 
     /**
-     * the custom position of the description text
+     * 描述文本的自定义位置
      */
     private MPPointF mPosition;
 
     /**
-     * the alignment of the description text
+     * 描述文本的对齐方式
      */
     private Paint.Align mTextAlign = Paint.Align.RIGHT;
 
@@ -34,29 +34,24 @@ public class Description extends ComponentBase {
     }
 
     /**
-     * Sets the text to be shown as the description.
-     * Never set this to null as this will cause nullpointer exception when drawing with Android Canvas.
-     *
-     * @param text
+     * 设置此文本为描述。千万不要将它设置为 null，因为这将在使用 Android 画布绘制时导致 NullPosiple 异常。
      */
     public void setText(String text) {
         this.text = text;
     }
 
     /**
-     * Returns the description text.
-     *
-     * @return
+     * 返回描述文本
      */
     public String getText() {
         return text;
     }
 
     /**
-     * Sets a custom position for the description text in pixels on the screen.
+     * 自定义设置在屏幕上以像素为单位的描述文本位置。
      *
-     * @param x - xcoordinate
-     * @param y - ycoordinate
+     * @param x - X坐标
+     * @param y - Y坐标
      */
     public void setPosition(float x, float y) {
         if (mPosition == null) {
@@ -68,27 +63,21 @@ public class Description extends ComponentBase {
     }
 
     /**
-     * Returns the customized position of the description, or null if none set.
-     *
-     * @return
+     * 返回自定义的描述文本位置，如果没有设置则返回NULL。
      */
     public MPPointF getPosition() {
         return mPosition;
     }
 
     /**
-     * Sets the text alignment of the description text. Default RIGHT.
-     *
-     * @param align
+     * 设置描述文本的文本对齐方式 {@link Paint.Align}。默认 RIGHT
      */
     public void setTextAlign(Paint.Align align) {
         this.mTextAlign = align;
     }
 
     /**
-     * Returns the text alignment of the description.
-     *
-     * @return
+     * 返回描述的文本对齐方式 {@link Paint.Align}
      */
     public Paint.Align getTextAlign() {
         return mTextAlign;

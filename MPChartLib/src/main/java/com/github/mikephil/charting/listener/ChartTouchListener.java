@@ -111,9 +111,7 @@ public abstract class ChartTouchListener<T extends Chart<?>> extends GestureDete
 
 
     /**
-     * Perform a highlight operation.
-     *
-     * @param e
+     * 执行高亮操作
      */
     protected void performHighlight(Highlight h, MotionEvent e) {
 

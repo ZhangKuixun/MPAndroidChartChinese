@@ -205,12 +205,11 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
     }
 
     /**
-     * Highlights the value at the given x-value in the given DataSet. Provide
-     * -1 as the dataSetIndex to undo all highlighting.
+     * 高亮给定 x 在数据集的值。设置 x 或 dataSetIndex 为-1撤销所有高亮。
      *
      * @param x
      * @param dataSetIndex
-     * @param stackIndex   the index inside the stack - only relevant for stacked entries
+     * @param stackIndex   柱状条目内的索引-只与柱状条目相关
      */
     public void highlightValue(float x, int dataSetIndex, int stackIndex) {
         highlightValue(new Highlight(x, dataSetIndex, stackIndex), false);

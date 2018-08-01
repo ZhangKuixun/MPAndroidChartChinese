@@ -3,44 +3,44 @@ package com.github.mikephil.charting.components;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.annotation.ColorInt;
 
 import com.github.mikephil.charting.utils.Utils;
 
 /**
- * This class encapsulates everything both Axis, Legend and LimitLines have in common.
- * 这个类封装了轴、图例和界线有共同点的东西。
+ * 这个类封装了轴(Axis)、图例(Legend)和分界线(LimitLines)有共同点的东西。
  *
  * @author Philipp Jahoda
  */
 public abstract class ComponentBase {
 
     /**
-     * flag that indicates if this axis / legend is enabled or not
+     * 指示是否启用该轴/图例的标志
      */
     protected boolean mEnabled = true;
 
     /**
-     * the offset in pixels this component has on the x-axis
+     * 该组件在X轴上的偏移像素量
      */
     protected float mXOffset = 5f;
 
     /**
-     * the offset in pixels this component has on the Y-axis
+     * 该组件在Y轴上的偏移像素量
      */
     protected float mYOffset = 5f;
 
     /**
-     * the typeface used for the labels
+     * 用于标签的字体
      */
     protected Typeface mTypeface = null;
 
     /**
-     * the text size of the labels
+     * 标签的文本大小
      */
     protected float mTextSize = Utils.convertDpToPixel(10f);
 
     /**
-     * the text color to use for the labels
+     * 用于标签的文本颜色
      */
     protected int mTextColor = Color.BLACK;
 
@@ -82,17 +82,13 @@ public abstract class ComponentBase {
      * Sets the used y-axis offset for the labels on this axis. For the legend,
      * higher offset means the legend as a whole will be placed further away
      * from the top.
-     *
-     * @param yOffset
      */
     public void setYOffset(float yOffset) {
         mYOffset = Utils.convertDpToPixel(yOffset);
     }
 
     /**
-     * returns the Typeface used for the labels, returns null if none is set
-     *
-     * @return
+     * 返回标签使用的字体，如果没有设置，返回null
      */
     public Typeface getTypeface() {
         return mTypeface;
@@ -124,9 +120,7 @@ public abstract class ComponentBase {
     }
 
     /**
-     * returns the text size that is currently set for the labels, in pixels
-     *
-     * @return
+     * 返回当前为标签设置的文本大小，以像素为单位
      */
     public float getTextSize() {
         return mTextSize;
@@ -135,17 +129,13 @@ public abstract class ComponentBase {
 
     /**
      * 设置轴标签的文字颜色。在使用资源的颜色时，请确保使用 getResources().getColor(...)
-     *
-     * @param color
      */
-    public void setTextColor(int color) {
+    public void setTextColor(@ColorInt int color) {
         mTextColor = color;
     }
 
     /**
-     * Returns the text color that is set for the labels.
-     *
-     * @return
+     * 返回标签设置的文本颜色。
      */
     public int getTextColor() {
         return mTextColor;
@@ -154,17 +144,13 @@ public abstract class ComponentBase {
     /**
      * 如果设置true，这个组件被启用或者被绘制。如果禁用，将不绘制该组件。
      * 默认: true
-     *
-     * @param enabled
      */
     public void setEnabled(boolean enabled) {
         mEnabled = enabled;
     }
 
     /**
-     * Returns true if this comonent is enabled (should be drawn), false if not.
-     *
-     * @return
+     * 返回true,启用此 comonent（应该被绘制），否则返回false。
      */
     public boolean isEnabled() {
         return mEnabled;
