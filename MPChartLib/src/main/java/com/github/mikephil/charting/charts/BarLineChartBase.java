@@ -59,14 +59,12 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     protected boolean mAutoScaleMinMaxEnabled = false;
 
     /**
-     * flag that indicates if pinch-zoom is enabled. if true, both x and y axis
-     * can be scaled with 2 fingers, if false, x and y axis can be scaled
-     * separately
+     * 指示是否启用缩放。如果为true，则X轴和Y轴都可以用2个手指缩放，如果为false，X轴和Y轴可以分别缩放。
      */
     protected boolean mPinchZoomEnabled = false;
 
     /**
-     * flag that indicates if double tap zoom is enabled or not
+     * 是否启用双击缩放
      */
     protected boolean mDoubleTapToZoomEnabled = true;
 
@@ -1189,9 +1187,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * Returns true if zooming via double-tap is enabled false if not.
-     *
-     * @return
+     * 返回 true 启用双击缩放；否则禁用
      */
     public boolean isDoubleTapToZoomEnabled() {
         return mDoubleTapToZoomEnabled;
@@ -1470,9 +1466,7 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
     }
 
     /**
-     * returns true if pinch-zoom is enabled, false if not
-     *
-     * @return
+     * 返回 true 启用缩放，否则禁用
      */
     public boolean isPinchZoomEnabled() {
         return mPinchZoomEnabled;

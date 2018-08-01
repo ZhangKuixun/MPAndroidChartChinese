@@ -16,7 +16,7 @@ public class MPPointF extends ObjectPool.Poolable {
     public float y;
 
     static {
-        pool = ObjectPool.create(32, new MPPointF(0,0));
+        pool = ObjectPool.create(32, new MPPointF(0, 0));
         pool.setReplenishPercentage(0.5f);
     }
 
@@ -46,26 +46,26 @@ public class MPPointF extends ObjectPool.Poolable {
         return result;
     }
 
-    public static void recycleInstance(MPPointF instance){
+    public static void recycleInstance(MPPointF instance) {
         pool.recycle(instance);
     }
 
-    public static void recycleInstances(List<MPPointF> instances){
+    public static void recycleInstances(List<MPPointF> instances) {
         pool.recycle(instances);
     }
 
     public static final Parcelable.Creator<MPPointF> CREATOR = new Parcelable.Creator<MPPointF>() {
         /**
-         * Return a new point from the data in the specified parcel.
+         * 从指定包裹中的数据返回一个新的点
          */
         public MPPointF createFromParcel(Parcel in) {
-            MPPointF r = new MPPointF(0,0);
+            MPPointF r = new MPPointF(0, 0);
             r.my_readFromParcel(in);
             return r;
         }
 
         /**
-         * Return an array of rectangles of the specified size.
+         * 返回指定大小的矩形数组
          */
         public MPPointF[] newArray(int size) {
             return new MPPointF[size];
@@ -73,27 +73,25 @@ public class MPPointF extends ObjectPool.Poolable {
     };
 
     /**
-     * Set the point's coordinates from the data stored in the specified
-     * parcel. To write a point to a parcel, call writeToParcel().
-     * Provided to support older Android devices.
+     * 从存储在指定包裹中的数据设置点坐标。调用 writeToParcel() 写一个点到一个包裹。提供支持旧 Android 设备。
      *
-     * @param in The parcel to read the point's coordinates from
+     * @param in 包裹读取点坐标
      */
     public void my_readFromParcel(Parcel in) {
         x = in.readFloat();
         y = in.readFloat();
     }
 
-    public float getX(){
+    public float getX() {
         return this.x;
     }
 
-    public float getY(){
+    public float getY() {
         return this.y;
     }
 
     @Override
     protected ObjectPool.Poolable instantiate() {
-        return new MPPointF(0,0);
+        return new MPPointF(0, 0);
     }
 }

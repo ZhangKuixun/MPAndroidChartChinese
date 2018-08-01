@@ -41,7 +41,7 @@ public class Highlight {
     private int mDataSetIndex;
 
     /**
-     * index which value of a stacked bar entry is highlighted, default -1
+     * 突出显示的柱状条目索引，默认值为-1。
      */
     private int mStackIndex = -1;
 

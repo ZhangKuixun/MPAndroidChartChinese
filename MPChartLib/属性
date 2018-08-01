@@ -28,11 +28,11 @@
 
    setDrawBorder(boolean enabled)：启用/禁用绘制图表边框（chart周围的线）。
 
-   setBorderColor（int color）：设置chart边框线的颜色。
+   setBorderColor(int color）：设置chart边框线的颜色。
 
-   setBorderWidth（float width）：设置chart边界线的宽度，单位dp。
+   setBorderWidth(float width）：设置chart边界线的宽度，单位dp。
 
-   setMaxVisibleValueCount（int count）：设置最大可见绘制的chartcount的数量。只在setDrawValues（）设置为true时有效。
+   setMaxVisibleValueCount(int count）：设置最大可见绘制的chartcount的数量。只在setDrawValues（）设置为true时有效。
 
 4、启用/禁用  手势交互
 
@@ -40,17 +40,17 @@
 
    setDragEnabled(boolean enabled)：启用/禁用拖动（平移）图表。
 
-   setScaleEnabled（boolean enabled）：启用/禁用缩放图表上的两个轴。
+   setScaleEnabled(boolean enabled）：启用/禁用缩放图表上的两个轴。
 
    setScaleXEnabled(boolean enabled)：启用/禁用缩放在X轴上。
 
    setScaleYEnabled(boolean enabled)：启用/禁用缩放在Y轴上。
 
-   setPinchZoom（boolena enabled）：如果设置为true，没缩放功能。如果false，x轴和y轴可分别放大。
+   setPinchZoom(boolean enabled）：如果设置为true，没缩放功能。如果false，x轴和y轴可分别放大。
 
-   setDoubleTapToZoomEnabled（booleanenabled）：设置为false以禁止通过在其上双击缩放图表。
+   setDoubleTapToZoomEnabled(boolean enabled）：设置为false以禁止通过在其上双击缩放图表。
 
-   setHighlightPerDragEnabled（booleanenabled）：设置为true，允许每个图表表面拖过，当它完全缩小突出。默认值：true
+   setHighlightPerDragEnabled(boolean enabled）：设置为true，允许每个图表表面拖过，当它完全缩小突出。默认值：true
 
    setHighlightPerTapEnabled(boolean enabled)：设置为false，以防止值由敲击姿态被突出显示。值仍然可以通过拖动或编程方式突出显示。默认值：true。
 
@@ -58,15 +58,15 @@
 
    setDragDecelerationEnabled(boolean enabled)：如果设置为true，手指滑动抛掷图表后继续减速滚动。默认值：true。
 
-    setDragDecelerationFrictionCoef（floatcoef）：减速的摩擦系数在[0；1]区间，数值越高表示速度回缓慢下降，例如，如果将其设置为0，将立即停止。1是一个无效的值，会自动转换至0.9999。
+    setDragDecelerationFrictionCoef(float coef）：减速的摩擦系数在[0；1]区间，数值越高表示速度回缓慢下降，例如，如果将其设置为0，将立即停止。1是一个无效的值，会自动转换至0.9999。
 
 6、高亮
 
-    highlightValues（Highlight[] highs）：高亮显示值，高亮显示的点击的位置在数据集中的值。设置null或空数组则撤销所有高亮。
+    highlightValues(Highlight[] highs）：高亮显示值，高亮显示的点击的位置在数据集中的值。设置null或空数组则撤销所有高亮。
 
-    highlightValue（int xIndex，intdataSetIndex）：高亮给定xIndex在数据集的值。设置xIndex或dataSetIndex为-1撤销所有高亮。
+    highlightValue(int xIndex，intdataSetIndex）：高亮给定xIndex在数据集的值。设置xIndex或dataSetIndex为-1撤销所有高亮。
 
-    getHighlightd（）：返回一个highlight[]其中包含所有高亮对象的信息，xIndex和dataSetIndex。以java编程方式使得值高亮不会回调onChartValueSelectedListener。
+    getHighlighted()：返回一个highlight[]其中包含所有高亮对象的信息，xIndex和dataSetIndex。以java编程方式使得值高亮不会回调onChartValueSelectedListener。
 
 7、选择回调
 
@@ -75,27 +75,18 @@
      publicinterface OnChartValueSelectedListener{
 
 /**
-
 *当点击图表里面的值
-
 *
-
 * @param e 选择的数据集
-
 * @param dataSetIndex  数据集的索引
-
 * @param h  相应的突出对象
-
 */
-
 public voidonValueSelected(Entry e, int dataSetIndex, Highlight h);
 
 
 
 /**
-
 *  当没有选择时
-
 */
 
 public voidonNothingSelected();
