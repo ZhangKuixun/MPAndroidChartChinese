@@ -93,24 +93,22 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     private float mDragDecelerationFrictionCoef = 0.9f;
 
     /**
-     * default value-formatter, number of digits depends on provided chart-data
+     * 默认值格式化程序，数字位数取决于提供的图表数据。
      */
     protected DefaultValueFormatter mDefaultValueFormatter = new DefaultValueFormatter(0);
 
     /**
-     * paint object used for drawing the description text in the bottom right
-     * corner of the chart
+     * 用于绘制图表右下角的描述文本
      */
     protected Paint mDescPaint;
 
     /**
-     * paint object for drawing the information text when there are no values in
-     * the chart
+     * 在图表中没有值时绘制信息文本
      */
     protected Paint mInfoPaint;
 
     /**
-     * the object representing the labels on the x-axis
+     * 表示X轴上的标签的对象
      */
     protected XAxis mXAxis;
 
@@ -125,48 +123,48 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     protected Description mDescription;
 
     /**
-     * the legend object containing all data associated with the legend
+     * 包含与图例关联的所有数据
      */
     protected Legend mLegend;
 
     /**
-     * listener that is called when a value on the chart is selected
+     * 当选择图表上的值时调用的监听器
      */
     protected OnChartValueSelectedListener mSelectionListener;
 
     protected ChartTouchListener mChartTouchListener;
 
     /**
-     * text that is displayed when the chart is empty
+     * 当图表为空时显示的文本
      */
     private String mNoDataText = "No chart data available.";
 
     /**
-     * Gesture listener for custom callbacks when making gestures on the chart.
+     * 在图表上做手势时的自定义回调的手势监听器
      */
     private OnChartGestureListener mGestureListener;
 
     protected LegendRenderer mLegendRenderer;
 
     /**
-     * object responsible for rendering the data
+     * 负责渲染数据
      */
     protected DataRenderer mRenderer;
 
     protected IHighlighter mHighlighter;
 
     /**
-     * object that manages the bounds and drawing constraints of the chart
+     * 管理图表的边界和绘图约束
      */
     protected ViewPortHandler mViewPortHandler = new ViewPortHandler();
 
     /**
-     * object responsible for animations
+     * 负责动画
      */
     protected ChartAnimator mAnimator;
 
     /**
-     * Extra offsets to be appended to the viewport
+     * 附加到视口的额外偏移量
      */
     private float mExtraTopOffset = 0.f,
             mExtraRightOffset = 0.f,
@@ -174,7 +172,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
             mExtraLeftOffset = 0.f;
 
     /**
-     * default constructor for initialization in code
+     * 代码初始化的默认构造函数
      */
     public Chart(Context context) {
         super(context);
@@ -182,7 +180,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * constructor for initialization in xml
+     * XML中初始化的构造函数
      */
     public Chart(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -190,7 +188,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * even more awesome constructor
+     * 更好的构造函数
      */
     public Chart(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -198,7 +196,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * initialize all paints and stuff
+     * 初始化所有画笔和材料
      */
     protected void init() {
 
@@ -218,7 +216,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
             });
         }
 
-        // initialize the utils
+        // 初始化 utils
         Utils.init(getContext());
         mMaxHighlightDistance = Utils.convertDpToPixel(500f);
 
@@ -454,6 +452,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * The maximum distance in dp away from an entry causing it to highlight.
+     * 远离入口的最大距离，使其突出。
      */
     protected float mMaxHighlightDistance = 0f;
 
