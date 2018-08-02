@@ -442,7 +442,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     /**
      * ################ ################ ################ ################
      */
-    /** BELOW THIS CODE FOR HIGHLIGHTING */
+    /** 在下面的代码用于突出显示(Highlight) */
 
     /**
      * 高亮显示值，在数据集中的显示对象数组
@@ -450,8 +450,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     protected Highlight[] mIndicesToHighlight;
 
     /**
-     * The maximum distance in dp away from an entry causing it to highlight.
-     * 远离入口的最大距离，使其突出。
+     * 最大高亮距离(dp)。 图表上条目大于这个距离不会触发高亮。
      */
     protected float mMaxHighlightDistance = 0f;
 
@@ -461,7 +460,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * 设置最大高亮距离(dp)。 图表上条目大于这个距离不会触发高亮。 默认值：500dp
+     * 设置最大高亮距离(dp)。 图表上条目大于这个距离不会触发高亮。 默认值：0dp
      *
      * @param distDp
      */
