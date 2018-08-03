@@ -151,9 +151,8 @@ public class CubicLineChartActivity extends DemoBase implements OnSeekBarChangeL
                 mChart.invalidate();
                 break;
             }
-            case R.id.actionToggleCubic: {
-                List<ILineDataSet> sets = mChart.getData()
-                        .getDataSets();
+            case R.id.actionToggleCubic: {//三次曲线
+                List<ILineDataSet> sets = mChart.getData().getDataSets();
 
                 for (ILineDataSet iSet : sets) {
 
@@ -260,7 +259,7 @@ public class CubicLineChartActivity extends DemoBase implements OnSeekBarChangeL
 
     private void setData(int count, float range) {
 
-        ArrayList<Entry> yVals = new ArrayList<Entry>();
+        ArrayList<Entry> yVals = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
             float mult = (range + 1);
@@ -282,7 +281,7 @@ public class CubicLineChartActivity extends DemoBase implements OnSeekBarChangeL
             // create a dataset and give it a type
             set1 = new LineDataSet(yVals, "DataSet 1");
 
-            set1.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+            set1.setMode(LineDataSet.Mode.CUBIC_BEZIER);//三次曲线／贝塞尔曲线
             set1.setCubicIntensity(0.2f);
             //set1.setDrawFilled(true);
             set1.setDrawCircles(false);

@@ -108,9 +108,7 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     /**
-     * Returns the drawing mode for this line dataset
-     *
-     * @return
+     * 返回曲线绘制模式{@link LineDataSet.Mode}
      */
     @Override
     public LineDataSet.Mode getMode() {
@@ -118,9 +116,7 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     /**
-     * Returns the drawing mode for this LineDataSet
-     *
-     * @return
+     * 曲线绘制模式 {@link LineDataSet.Mode}
      */
     public void setMode(LineDataSet.Mode mode) {
         mMode = mode;
@@ -407,9 +403,21 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
     }
 
     public enum Mode {
+        /**
+         * 普通折线图
+         */
         LINEAR,
+        /**
+         * 举步曲线
+         */
         STEPPED,
+        /**
+         * 三次曲线／贝塞尔曲线
+         */
         CUBIC_BEZIER,
+        /**
+         * 水平贝塞尔曲线
+         */
         HORIZONTAL_BEZIER
     }
 }
