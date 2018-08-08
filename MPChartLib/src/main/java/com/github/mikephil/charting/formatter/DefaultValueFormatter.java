@@ -12,8 +12,7 @@ import java.text.DecimalFormat;
  *
  * @author Philipp Jahoda
  */
-public class DefaultValueFormatter implements IValueFormatter
-{
+public class DefaultValueFormatter implements IValueFormatter {
 
     /**
      * DecimalFormat for formatting
@@ -33,9 +32,7 @@ public class DefaultValueFormatter implements IValueFormatter
     }
 
     /**
-     * Sets up the formatter with a given number of decimal digits.
-     *
-     * @param digits
+     * 设置格式化，用给定的小数位数
      */
     public void setup(int digits) {
 

@@ -197,19 +197,14 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Returns the smallest y-value the data object contains.
-     *
-     * @return
+     * 返回数据对象包含的最小y值。
      */
     public float getYMin() {
         return mYMin;
     }
 
     /**
-     * Returns the minimum y-value for the specified axis.
-     *
-     * @param axis
-     * @return
+     * 返回指定轴的最小y值。
      */
     public float getYMin(AxisDependency axis) {
         if (axis == AxisDependency.LEFT) {

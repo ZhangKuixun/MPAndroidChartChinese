@@ -313,8 +313,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Removes all DataSets (and thereby Entries) from the chart. Does not set the data object to null. Also refreshes the
-     * chart by calling invalidate().
+     * 删除图表的所有 DataSets。不能设置数据对象为null。也调用 invalidate() 刷新图表。
      */
     public void clearValues() {
         mData.clearValues();
@@ -322,10 +321,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns true if the chart is empty (meaning it's data object is either
-     * null or contains no entries).
-     *
-     * @return
+     * 返回 true，当前图表是空的（意思是它的数据对象是NULL或不包含条目）
      */
     public boolean isEmpty() {
 
@@ -341,28 +337,23 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Lets the chart know its underlying data has changed and performs all
-     * necessary recalculations. It is crucial that this method is called
-     * everytime data is changed dynamically. Not calling this method can lead
-     * to crashes or unexpected behaviour.
+     * 让图表知道其基础数据已经改变，并执行所有必要的重新计算。每次数据动态改变都会调用此方法，是至关重要的。
+     * 不调用此方法会导致崩溃或意外发生。
      */
     public abstract void notifyDataSetChanged();
 
     /**
-     * Calculates the offsets of the chart to the border depending on the
-     * position of an eventual legend or depending on the length of the y-axis
-     * and x-axis labels and their position
+     * 计算图表到边框的偏移量，根据最后一个图例的位置 或 取决于Y轴和X轴标签的长度及其位置
      */
     protected abstract void calculateOffsets();
 
     /**
-     * Calculates the y-min and y-max value and the y-delta and x-delta value
+     * 计算 Y最小／最大值（y-min and y-max）和 （y-delta and x-delta）值
      */
     protected abstract void calcMinMax();
 
     /**
-     * Calculates the required number of digits for the values that might be
-     * drawn in the chart (if enabled), and creates the default-value-formatter
+     * 计算可能在图表中绘制的值,所需的位数（如果启用）,并创建默认值格式化
      */
     protected void setupDefaultFormatter(float min, float max) {
 
@@ -377,12 +368,12 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
         int digits = Utils.getDecimals(reference);
 
-        // setup the formatter with a new number of digits
+        // 设置格式化，使用新的位数
         mDefaultValueFormatter.setup(digits);
     }
 
     /**
-     * flag that indicates if offsets calculation has already been done or not
+     * 偏移量计算是否已经完成
      */
     private boolean mOffsetsCalculated = false;
 
@@ -410,11 +401,11 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Draws the description text in the bottom right corner of the chart (per default)
+     * 画描述文本，在图标的右下角（默认位置）
      */
     protected void drawDescription(Canvas c) {
 
-        // check if description should be drawn
+        // 检查是否应该绘制描述
         if (mDescription != null && mDescription.isEnabled()) {
 
             MPPointF position = mDescription.getPosition();
@@ -426,7 +417,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
             float x, y;
 
-            // if no position specified, draw on default position
+            // 如果没有指定位置，则使用默认位置
             if (position == null) {
                 x = getWidth() - mViewPortHandler.offsetRight() - mDescription.getXOffset();
                 y = getHeight() - mViewPortHandler.offsetBottom() - mDescription.getYOffset();
@@ -478,9 +469,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns true if values can be highlighted via tap gesture, false if not.
-     *
-     * @return
+     * 返回true，值通过点击手势高亮显示。false，不能
      */
     public boolean isHighlightPerTapEnabled() {
         return mHighLightPerTapEnabled;
@@ -496,7 +485,6 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     /**
      * 如果存在要突出显示的值，则返回true，如果没有要突出显示的值，则返回false。检查高亮数组是否为空，长度为零，或者第一个对象是否为空。
      *
-     * @return
      */
     public boolean valuesToHighlight() {
         return mIndicesToHighlight == null || mIndicesToHighlight.length <= 0
