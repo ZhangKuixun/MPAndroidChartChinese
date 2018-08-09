@@ -484,7 +484,6 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * 如果存在要突出显示的值，则返回true，如果没有要突出显示的值，则返回false。检查高亮数组是否为空，长度为零，或者第一个对象是否为空。
-     *
      */
     public boolean valuesToHighlight() {
         return mIndicesToHighlight == null || mIndicesToHighlight.length <= 0
@@ -493,9 +492,7 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Sets the last highlighted value for the touchlistener.
-     *
-     * @param highs
+     * 为 mChartTouchListener 设置最后高亮值
      */
     protected void setLastHighlighted(Highlight[] highs) {
 
@@ -645,19 +642,16 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Set a new (e.g. custom) ChartTouchListener NOTE: make sure to
-     * setTouchEnabled(true); if you need touch gestures on the chart
+     * 设置 ChartTouchListener 标签，请确保 setTouchEnabled(true); 如果需要在图表上做触摸手势
      *
-     * @param l
+     * @param l ChartTouchListener
      */
     public void setOnTouchListener(ChartTouchListener l) {
         this.mChartTouchListener = l;
     }
 
     /**
-     * Returns an instance of the currently active touch listener.
-     *
-     * @return
+     * 返回当前激活的触摸侦听器的实例。
      */
     public ChartTouchListener getOnTouchListener() {
         return mChartTouchListener;
@@ -713,11 +707,9 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Returns the actual position in pixels of the MarkerView for the given
-     * Highlight object.
+     * 返回给定高亮对象 MarkerView 的像素的实际位置。
      *
-     * @param high
-     * @return
+     * @param high 高亮对象
      */
     protected float[] getMarkerPosition(Highlight high) {
         return new float[]{high.getDrawX(), high.getDrawY()};
