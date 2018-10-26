@@ -53,7 +53,7 @@ public abstract class LineRadarDataSet<T extends Entry> extends LineScatterCandl
     }
 
     /**
-     * 设置填充颜色。
+     * 设置填充折线绘制区域颜色。
      * <p>
      * 设置用于填充线下区域的颜色。最终设置“fillDrawable”。
      *

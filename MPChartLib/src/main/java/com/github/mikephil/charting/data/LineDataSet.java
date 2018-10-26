@@ -15,10 +15,13 @@ import com.github.mikephil.charting.utils.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 折线图数据集
+ */
 public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet {
 
     /**
-     * Drawing mode for this line dataset
+     * 折线图的绘制模式
      **/
     private LineDataSet.Mode mMode = Mode.LINEAR;
 

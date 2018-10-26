@@ -470,7 +470,7 @@ public interface IDataSet<T extends Entry> {
     void setDrawIcons(boolean enabled);
 
     /**
-     * Returns true if y-icon drawing is enabled, false if not
+     * 如果启用了绘制 y-icon，则返回true，如果不是，则返回false
      *
      * @return
      */

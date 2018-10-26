@@ -717,14 +717,12 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
 
     /**
      * ################ ################ ################ ################
-     * ANIMATIONS ONLY WORK FOR API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 动画只适用于API 11级（Android 3.0.x）和更高。
      */
-    /** CODE BELOW THIS RELATED TO ANIMATION */
+    /** 下面的代码与动画有关 */
 
     /**
-     * Returns the animator responsible for animating chart values.
-     *
-     * @return
+     * 返回负责动画的动画图表值。
      */
     public ChartAnimator getAnimator() {
         return mAnimator;
@@ -769,17 +767,17 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
      * ################ ################ ################ ################
      * 动画只适用于API 11 (Android 3.0.x) 或者更高.
      */
-    /** CODE BELOW FOR PROVIDING EASING FUNCTIONS */
+    /** 提供缓和功能的代码 */
 
     /**
-     * Animates the drawing / rendering of the chart on both x- and y-axis with
-     * the specified animation time. If animate(...) is called, no further
-     * calling of invalidate() is necessary to refresh the chart. ANIMATIONS
-     * ONLY WORK FOR API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 指定时间内在X轴和Y轴上绘制/渲染图表时的动画。
+     * <p>
+     * 如果调用了 animate(...)，没有紧跟调用 invalidate() 来刷新图表。
+     * 动画只适用于API 11级（Android 3。x）和更高。
      *
-     * @param durationMillisX
-     * @param durationMillisY
-     * @param easingX         a custom easing function to be used on the animation phase
+     * @param durationMillisX X轴持续时间
+     * @param durationMillisY Y轴持续时间
+     * @param easingX         在动画阶段使用的自定义放松功能 a custom easing function to be used on the animation phase
      * @param easingY         a custom easing function to be used on the animation phase
      */
     @RequiresApi(11)
@@ -789,10 +787,10 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Animates the drawing / rendering of the chart on both x- and y-axis with
-     * the specified animation time. If animate(...) is called, no further
-     * calling of invalidate() is necessary to refresh the chart. ANIMATIONS
-     * ONLY WORK FOR API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 指定时间内在X轴和Y轴上绘制/渲染图表时的动画。
+     * <p>
+     * 如果调用了 animate(...)，则不需要调用 invalidate() 来刷新图表。
+     * 动画只适用于API 11级（Android 3。x）和更高。
      *
      * @param durationMillisX
      * @param durationMillisY
@@ -804,10 +802,10 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
     }
 
     /**
-     * Animates the rendering of the chart on the x-axis with the specified
-     * animation time. If animate(...) is called, no further calling of
-     * invalidate() is necessary to refresh the chart. ANIMATIONS ONLY WORK FOR
-     * API LEVEL 11 (Android 3.0.x) AND HIGHER.
+     * 指定时间内在X轴上绘制图表时的动画。
+     * <p>
+     * 如果调用了 animate(...)，则不需要调用 invalidate() 来刷新图表。
+     * 动画只适用于API 11级（Android 3。x）和更高。
      *
      * @param durationMillis
      * @param easing         a custom easing function to be used on the animation phase
