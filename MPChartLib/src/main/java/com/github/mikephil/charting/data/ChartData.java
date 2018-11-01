@@ -665,8 +665,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Sets the color of the value-text (color in which the value-labels are
-     * drawn) for all DataSets this data object contains.
+     * 设置文本颜色(绘制标签的颜色)，为该数据对象{@see mDataSets}的所有数据集
      *
      * @param color
      */
@@ -677,8 +676,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Sets the same list of value-colors for all DataSets this
-     * data object contains.
+     * 设置相同的值颜色列表，为该数据对象{@see mDataSets}的所有数据集
      *
      * @param colors
      */
@@ -689,8 +687,7 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     /**
-     * Sets the Typeface for all value-labels for all DataSets this data object
-     * contains.
+     * 设置文本的字体，为该数据对象{@see mDataSets}的所有数据集
      *
      * @param tf
      */
